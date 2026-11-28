@@ -1505,31 +1505,294 @@
       color: var(--green);
       border-color: rgba(21, 128, 61, 0.25);
     }
+    /* Sync Slabs — Screenshot-Matched Offline & Google Drive Cards */
+    .sync-card-v2 {
+      padding: 18px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sync-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .sync-card-head-left {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+    .sync-card-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: rgba(99, 102, 241, 0.16);
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      color: #818cf8;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    [data-theme="light"] .sync-card-icon-box {
+      color: #4f46e5;
+      background: rgba(79, 70, 229, 0.12);
+      border-color: rgba(79, 70, 229, 0.22);
+    }
+    .sync-card-title-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .sync-card-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .sync-card-sub {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+    .sync-linked-line {
+      font-size: 12.5px;
+      font-weight: 650;
+      color: var(--text-muted);
+      margin-top: -2px;
+    }
+    .sync-btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+    .sync-stack-btn {
+      width: 100%;
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 13px;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 750;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      transition: transform 0.12s ease, opacity 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .sync-stack-btn:active {
+      transform: scale(0.985);
+    }
+    .sync-stack-btn:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+    .sync-stack-btn.primary {
+      border: 1px solid rgba(99, 102, 241, 0.65);
+      background: linear-gradient(135deg, #6366f1 0%, #5850ec 100%);
+      color: #ffffff;
+      box-shadow: 0 6px 18px -6px rgba(99, 102, 241, 0.55);
+    }
+    .sync-stack-btn.primary:hover {
+      opacity: 0.94;
+    }
+    .sync-stack-btn.dark {
+      border: 1px solid var(--tile-border);
+      background: var(--tile-bg);
+      color: var(--text);
+    }
+    .sync-stack-btn.dark:hover {
+      border-color: #6366f1;
+      background: var(--tile-hover);
+    }
+    .sync-stack-btn.soft {
+      border: 1px solid var(--tile-border);
+      background: rgba(148, 163, 184, 0.15);
+      color: var(--text);
+    }
+    [data-theme="light"] .sync-stack-btn.soft {
+      background: rgba(15, 23, 42, 0.06);
+    }
+    .sync-stack-btn.soft:hover {
+      border-color: #10b981;
+      background: var(--tile-hover);
+    }
+    .sync-path-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 2px;
+    }
+    .sync-path-label {
+      font-size: 12.5px;
+      font-weight: 750;
+      color: var(--text);
+    }
+    .sync-path-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .sync-path-input {
+      width: 100%;
+      height: 42px !important;
+      padding: 0 13px !important;
+      border-radius: 12px !important;
+      border: 1px solid var(--input-border) !important;
+      background: var(--tile-bg) !important;
+      color: var(--text) !important;
+      font-family: inherit;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+    }
+    .sync-path-input:focus {
+      border-color: #6366f1 !important;
+    }
+    .sync-side-btn {
+      height: 42px;
+      padding: 0 16px;
+      border-radius: 12px;
+      border: 1px solid var(--tile-border);
+      background: rgba(148, 163, 184, 0.15);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 750;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    [data-theme="light"] .sync-side-btn {
+      background: rgba(15, 23, 42, 0.06);
+    }
+    .sync-side-btn:hover {
+      border-color: #6366f1;
+      background: var(--tile-hover);
+    }
+    .sync-guide-btn {
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 10px;
+      border: 1px solid var(--tile-border);
+      background: rgba(148, 163, 184, 0.14);
+      color: var(--text-2);
+      font-family: inherit;
+      font-size: 11.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+    }
+    .sync-guide-btn:hover {
+      border-color: #6366f1;
+      color: var(--text);
+    }
+    .sync-conn-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(148, 163, 184, 0.14);
+      color: var(--text-muted);
+      border: 1px solid var(--tile-border);
+      white-space: nowrap;
+    }
+    .sync-conn-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.75;
+    }
+    .sync-conn-badge.connected {
+      background: rgba(16, 185, 129, 0.16);
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.32);
+    }
+    .sync-conn-badge.connected::before {
+      opacity: 1;
+    }
+    .sync-check-v2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      margin-top: 2px;
+      user-select: none;
+    }
+    .sync-check-v2 input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #6366f1;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .sync-check-v2 span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      line-height: 1.35;
+    }
+
+    /* Top-Right Floating Green 'Synced' Strip */
     .global-toast {
       position: fixed;
-      left: 50%;
-      bottom: calc(62px + env(safe-area-inset-bottom, 0px));
-      transform: translateX(-50%) translateY(10px);
-      max-width: min(360px, calc(100vw - 28px));
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--popover-bg);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid var(--tile-border);
-      box-shadow: var(--shadow-pop);
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 700;
-      text-align: center;
+      top: calc(10px + env(safe-area-inset-top, 0px));
+      right: 12px;
+      left: auto;
+      bottom: auto;
+      transform: translateY(-10px) scale(0.98);
+      max-width: min(340px, calc(100vw - 24px));
+      padding: 11px 18px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 12px 28px -6px rgba(5, 150, 105, 0.55);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      text-align: left;
       pointer-events: none;
       opacity: 0;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      z-index: 150;
+      transition: opacity 0.2s ease, transform 0.22s ease;
+      z-index: 260;
+    }
+    .global-toast.err {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      box-shadow: 0 12px 28px -6px rgba(220, 38, 38, 0.5);
+    }
+    .global-toast.info {
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+      box-shadow: 0 12px 28px -6px rgba(79, 70, 229, 0.5);
     }
     .global-toast.show {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0) scale(1);
     }
 
     /* Graph Page — First Graph Slab (Global Raw Gold / Silver 2Y Trend in INR) */
@@ -3183,6 +3446,646 @@
       text-align: center;
     }
 
+    /* QR & Barcode Scanner Tool */
+    .scanner-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .scanner-btn-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .scanner-act-btn {
+      height: 30px;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 11.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .scanner-act-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .scanner-act-btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .scanner-act-btn.primary:hover {
+      opacity: 0.92;
+      color: #ffffff;
+      background: var(--accent);
+    }
+    .scanner-act-btn.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .scanner-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      max-height: 270px;
+      border-radius: 13px;
+      border: 1px solid var(--tile-border);
+      background: #090e1a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .scanner-video,
+    .scanner-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    .scanner-preview-img {
+      object-fit: contain;
+      background: #090e1a;
+    }
+    .scanner-viewport.cam-live .scanner-video {
+      display: block;
+    }
+    .scanner-viewport.photo-mode .scanner-preview-img {
+      display: block;
+    }
+    .scanner-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 16px;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .scanner-viewport.cam-live .scanner-placeholder,
+    .scanner-viewport.photo-mode .scanner-placeholder {
+      display: none;
+    }
+    .scanner-reticle {
+      display: none;
+      position: absolute;
+      width: 66%;
+      max-width: 220px;
+      aspect-ratio: 1 / 1;
+      max-height: 76%;
+      pointer-events: none;
+      border-radius: 14px;
+      box-shadow: 0 0 0 9999px rgba(5, 8, 17, 0.38);
+      border: 2px solid rgba(96, 165, 250, 0.85);
+    }
+    .scanner-viewport.cam-live .scanner-reticle {
+      display: block;
+    }
+    .scanner-scan-line {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+      box-shadow: 0 0 8px #60a5fa;
+      animation: scannerSweep 2.1s ease-in-out infinite;
+    }
+    @keyframes scannerSweep {
+      0%   { top: 10%; opacity: 0.7; }
+      50%  { top: 88%; opacity: 1; }
+      100% { top: 10%; opacity: 0.7; }
+    }
+    .scanner-status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 650;
+      color: var(--text-muted);
+    }
+    .scanner-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 10.5px;
+      font-weight: 750;
+      background: var(--input-bg);
+      color: var(--text-2);
+      border: 1px solid var(--tile-border);
+    }
+    .scanner-status-pill.live {
+      background: var(--green-soft);
+      color: var(--green);
+      border-color: rgba(21, 128, 61, 0.25);
+    }
+    .scanner-status-pill.err {
+      background: var(--red-soft);
+      color: var(--red);
+      border-color: rgba(185, 28, 28, 0.25);
+    }
+    .scanner-result-box {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      padding: 11px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--accent);
+      background: var(--input-bg);
+      animation: popIn 0.16s ease;
+    }
+    .scanner-result-box.show {
+      display: flex;
+    }
+    .scanner-result-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .scanner-format-badge {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .scanner-result-text {
+      font-size: 13.5px;
+      font-weight: 750;
+      color: var(--text);
+      word-break: break-word;
+      user-select: text;
+      -webkit-user-select: text;
+      line-height: 1.4;
+    }
+    .scanner-result-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .scanner-history {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .scanner-history.show {
+      display: flex;
+    }
+    .scanner-hist-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 6px 9px;
+      border-radius: 9px;
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      font-size: 11.5px;
+    }
+    .scanner-hist-val {
+      color: var(--text-2);
+      font-weight: 650;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+      flex: 1;
+    }
+
+    /* Health Calculator Tool */
+    .hc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      width: 100%;
+    }
+    .hc-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+      width: 100%;
+    }
+    .hc-imp-ht {
+      display: none;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+    }
+    .hc-imp-ht.show {
+      display: grid;
+    }
+    .hc-imp-ht input {
+      width: 100%;
+      min-width: 0;
+      height: 26px;
+      padding: 0 2px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-align: right;
+      border: none;
+      background: transparent;
+      color: var(--text);
+    }
+    .hc-bmi-card {
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .hc-bmi-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .hc-bmi-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .hc-bmi-pill.under  { background: var(--accent-soft); color: var(--accent); }
+    .hc-bmi-pill.normal { background: var(--green-soft); color: var(--green); }
+    .hc-bmi-pill.over   { background: rgba(234, 179, 8, 0.18); color: #b45309; }
+    .hc-bmi-pill.obese  { background: var(--red-soft); color: var(--red); }
+    [data-theme="dark"] .hc-bmi-pill.over { color: #facc15; }
+    .hc-bmi-track {
+      position: relative;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #3b82f6 0%, #3b82f6 22%, #22c55e 22%, #22c55e 52%, #eab308 52%, #eab308 74%, #ef4444 74%, #ef4444 100%);
+      overflow: visible;
+    }
+    .hc-bmi-marker {
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--popover-bg);
+      border: 2.5px solid var(--text);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: left 0.2s ease;
+    }
+    .hc-bmi-scale-lbls {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .hc-kpi-box {
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .hc-kpi-val {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hc-kpi-val.accent { color: var(--accent); }
+    .hc-kpi-sub {
+      font-size: 10px;
+      font-weight: 650;
+      color: var(--text-muted);
+    }
+
+    /* Roman Numerals Converter Tool */
+    .roman-result-box {
+      padding: 12px 13px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--accent);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .roman-result-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .roman-result-val {
+      font-size: 26px;
+      font-weight: 850;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      word-break: break-word;
+      user-select: text;
+      -webkit-user-select: text;
+      line-height: 1.2;
+    }
+    .roman-err-msg {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red);
+      display: none;
+    }
+    .roman-err-msg.show {
+      display: block;
+    }
+    .roman-ref-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      padding-top: 2px;
+    }
+    .roman-ref-pill {
+      font-size: 10.5px;
+      font-weight: 750;
+      color: var(--text-muted);
+      background: var(--input-bg);
+      border: 1px solid var(--tile-border);
+      border-radius: 999px;
+      padding: 2px 8px;
+      white-space: nowrap;
+    }
+    .roman-ref-pill strong {
+      color: var(--text);
+      margin-right: 2px;
+    }
+
+    /* Countdown & Stopwatch Tools */
+    .tm-display-box {
+      padding: 14px 14px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    .tm-display-box.done {
+      border-color: var(--red);
+      background: var(--red-soft);
+      animation: tmDonePulse 0.9s ease-in-out 3;
+    }
+    @keyframes tmDonePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.012); }
+    }
+    .tm-time-main {
+      font-size: 34px;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--text);
+    }
+    .tm-time-cs {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--accent);
+      margin-left: 2px;
+    }
+    .tm-sub-line {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      min-height: 16px;
+    }
+    .tm-prog-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--tile-bg);
+      border: 1px solid var(--tile-border);
+      overflow: hidden;
+    }
+    .tm-prog-fill {
+      height: 100%;
+      width: 100%;
+      border-radius: 999px;
+      background: var(--accent);
+      transition: width 0.15s linear, background-color 0.2s ease;
+    }
+    .tm-prog-fill.low {
+      background: var(--red);
+    }
+    .tm-inputs-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+      width: 100%;
+    }
+    .tm-unit-box {
+      padding: 6px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .tm-unit-box input {
+      width: 100%;
+      height: 28px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 800;
+      text-align: center;
+      padding: 0;
+    }
+    .tm-unit-box input:focus {
+      box-shadow: none;
+    }
+    .tm-presets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+    .tm-preset-btn {
+      height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      color: var(--text-2);
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 750;
+      cursor: pointer;
+      transition: all 0.14s ease;
+    }
+    .tm-preset-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .tm-actions-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 7px;
+      width: 100%;
+    }
+    .tm-act-btn {
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 750;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.14s ease;
+    }
+    .tm-act-btn:hover:not(:disabled) {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .tm-act-btn:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+    .tm-act-btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .tm-act-btn.primary:hover:not(:disabled) {
+      opacity: 0.92;
+      color: #ffffff;
+      background: var(--accent);
+    }
+    .tm-act-btn.running {
+      background: var(--red-soft);
+      border-color: var(--red);
+      color: var(--red);
+    }
+    .tm-act-btn.running:hover:not(:disabled) {
+      background: var(--red);
+      color: #ffffff;
+    }
+    .sw-laps-wrap {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .sw-laps-wrap.show {
+      display: flex;
+    }
+    .sw-laps-list {
+      max-height: 175px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--tile-border);
+      background: var(--input-bg);
+      padding: 4px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .sw-lap-row {
+      display: grid;
+      grid-template-columns: 46px 1fr 1fr;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: var(--tile-bg);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-2);
+    }
+    .sw-lap-row.best {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+    .sw-lap-row.worst {
+      background: var(--red-soft);
+      color: var(--red);
+    }
+    .sw-lap-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+    .sw-lap-row.best .sw-lap-num { color: var(--green); }
+    .sw-lap-row.worst .sw-lap-num { color: var(--red); }
+    .sw-lap-split { text-align: center; }
+    .sw-lap-total { text-align: right; color: var(--text); font-weight: 800; }
+    .sw-lap-row.best .sw-lap-total { color: var(--green); }
+    .sw-lap-row.worst .sw-lap-total { color: var(--red); }
+
+    .wx-title-group {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .wx-coords-sub {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 1.5px 6px;
+      border-radius: 999px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+    }
+    @media (max-width: 420px) {
+      .wx-coords-sub {
+        font-size: 9.5px;
+        padding: 1px 5px;
+      }
+    }
 
     /* Weather Slab (Exact Same Thickness & Width as World Clock) */
     .wx-top-sub {
@@ -5241,7 +6144,10 @@
         <!-- TOOL 4: WEATHER (EXACT SAME SIZE AS WORLD CLOCK) -->
         <section class="tile tool-tall-slab" id="weatherTile" data-slab-id="weatherTile">
           <div class="tool-slab-head">
-            <span class="tool-slab-title">Weather</span>
+            <div class="wx-title-group">
+              <span class="tool-slab-title">Weather</span>
+              <span class="wx-coords-sub tabular" id="wxLiveCoords" title="Live location latitude and longitude">22.5726°N, 88.3639°E</span>
+            </div>
             <div class="tool-slab-meta-stack">
               <span class="tool-slab-meta" id="wxHeaderMeta">Kolkata · Clear</span>
             </div>
@@ -5361,6 +6267,41 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
           </span>
           <span class="util-tile-label">Compass</span>
+        </div>
+
+        <div role="button" tabindex="0" class="util-square-tile" id="sqTile-scanner" data-slab-id="sq-scanner" onclick="toggleUtilSlab('scanner')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('scanner');}">
+          <span class="util-tile-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/><rect x="8" y="7" width="3" height="3"/><rect x="13" y="14" width="3" height="3"/></svg>
+          </span>
+          <span class="util-tile-label">Scanner</span>
+        </div>
+
+        <div role="button" tabindex="0" class="util-square-tile" id="sqTile-health" data-slab-id="sq-health" onclick="toggleUtilSlab('health')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('health');}">
+          <span class="util-tile-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <span class="util-tile-label">Health Calculator</span>
+        </div>
+
+        <div role="button" tabindex="0" class="util-square-tile" id="sqTile-roman" data-slab-id="sq-roman" onclick="toggleUtilSlab('roman')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('roman');}">
+          <span class="util-tile-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h6"/><path d="M8 5v14"/><path d="M5 19h6"/><path d="M14 5l5 14"/><path d="M19 5l-5 14"/></svg>
+          </span>
+          <span class="util-tile-label">Roman Numerals</span>
+        </div>
+
+        <div role="button" tabindex="0" class="util-square-tile" id="sqTile-countdown" data-slab-id="sq-countdown" onclick="toggleUtilSlab('countdown')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('countdown');}">
+          <span class="util-tile-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14"/><path d="M5 22h14"/><path d="M6 2v4a6 6 0 0 0 12 0V2"/><path d="M6 22v-4a6 6 0 0 1 12 0v4"/></svg>
+          </span>
+          <span class="util-tile-label">Countdown</span>
+        </div>
+
+        <div role="button" tabindex="0" class="util-square-tile" id="sqTile-stopwatch" data-slab-id="sq-stopwatch" onclick="toggleUtilSlab('stopwatch')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('stopwatch');}">
+          <span class="util-tile-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5"/><path d="M9 2h6"/><path d="M12 2v3"/></svg>
+          </span>
+          <span class="util-tile-label">Stopwatch</span>
         </div>
 
         <div role="button" tabindex="0" class="util-square-tile" id="sqTile-emi" data-slab-id="sq-emi" onclick="toggleUtilSlab('emi')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleUtilSlab('emi');}">
@@ -5549,6 +6490,302 @@
                 <span class="compass-dir" id="compassDir">N</span>
               </div>
               <span class="compass-status" id="compassStatus">Tap Enable Sensor to grant compass access</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL SLAB: QR & BARCODE SCANNER -->
+        <section class="tile util-slab" id="scannerSlab">
+          <div class="tool-slab-head">
+            <span class="tool-slab-title"><span class="util-head-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/><rect x="8" y="7" width="3" height="3"/><rect x="13" y="14" width="3" height="3"/></svg></span>Scanner<span class="bullion-slab-sub">(QR &amp; Barcode)</span></span>
+            <button type="button" class="util-close-btn" onclick="closeUtilSlab()" title="Close">✕</button>
+          </div>
+
+          <div class="util-body">
+            <div class="scanner-toolbar">
+              <div class="scanner-btn-group">
+                <button type="button" class="scanner-act-btn primary" id="scannerCamBtn" onclick="toggleScannerCamera()">📷 Start Camera</button>
+                <button type="button" class="scanner-act-btn" id="scannerFlipBtn" onclick="flipScannerCamera()" title="Switch Front / Rear Camera" style="display:none;">🔄 Flip</button>
+                <button type="button" class="scanner-act-btn" id="scannerTorchBtn" onclick="toggleScannerTorch()" title="Toggle Flash" style="display:none;">🔦 Flash</button>
+              </div>
+              <div class="scanner-btn-group">
+                <button type="button" class="scanner-act-btn" onclick="document.getElementById('scannerFileInput').click()">🖼 Upload Photo</button>
+                <input type="file" id="scannerFileInput" accept="image/*" style="display:none;" onchange="scanUploadedPhoto(event)" />
+              </div>
+            </div>
+
+            <div class="scanner-viewport" id="scannerViewport">
+              <video class="scanner-video" id="scannerVideo" playsinline muted autoplay></video>
+              <img class="scanner-preview-img" id="scannerPreviewImg" alt="Uploaded code preview" />
+              <div class="scanner-reticle" aria-hidden="true">
+                <div class="scanner-scan-line"></div>
+              </div>
+              <div class="scanner-placeholder" id="scannerPlaceholder">
+                <span style="font-size:24px;">📷</span>
+                <span>Allow camera access to scan QR &amp; Barcodes, or upload a photo.</span>
+              </div>
+            </div>
+
+            <div class="scanner-status-row">
+              <span class="scanner-status-pill" id="scannerStatusPill">Ready</span>
+              <span id="scannerStatusText">Point camera at QR code or Barcode</span>
+            </div>
+
+            <div class="scanner-result-box" id="scannerResultBox">
+              <div class="scanner-result-head">
+                <span class="sub-label">Scanned Result</span>
+                <span class="scanner-format-badge" id="scannerResultFormat">QR_CODE</span>
+              </div>
+              <div class="scanner-result-text" id="scannerResultText"></div>
+              <div class="scanner-result-actions">
+                <button type="button" class="scanner-act-btn primary" id="scannerCopyBtn" onclick="copyScannerResult()">📋 Copy</button>
+                <a class="scanner-act-btn" id="scannerOpenLinkBtn" href="#" target="_blank" rel="noopener noreferrer" style="display:none; text-decoration:none;">↗ Open Link</a>
+                <button type="button" class="scanner-act-btn" onclick="rescanFromCamera()">↻ Scan Again</button>
+              </div>
+            </div>
+
+            <div class="scanner-history" id="scannerHistoryWrap">
+              <span class="sub-label">Recent Scans</span>
+              <div id="scannerHistoryList" style="display:flex; flex-direction:column; gap:5px;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL SLAB: HEALTH CALCULATOR -->
+        <section class="tile util-slab" id="healthCalculatorSlab">
+          <div class="tool-slab-head">
+            <span class="tool-slab-title"><span class="util-head-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>Health Calculator</span>
+            <div style="display:inline-flex; align-items:center; gap:6px;">
+              <div class="calc-mode-seg" role="tablist" aria-label="Health Unit System">
+                <button type="button" class="calc-mode-btn active" id="hcUnitMetric" onclick="setHealthUnit('metric')">Metric</button>
+                <button type="button" class="calc-mode-btn" id="hcUnitImperial" onclick="setHealthUnit('imperial')">Imperial</button>
+              </div>
+              <button type="button" class="util-close-btn" onclick="closeUtilSlab()" title="Close">✕</button>
+            </div>
+          </div>
+
+          <div class="util-body">
+            <!-- Row 1: Gender & Age -->
+            <div class="hc-grid-2">
+              <div class="orn-toggle" role="tablist" aria-label="Gender">
+                <button type="button" class="orn-toggle-btn active" id="hcGenderMale" onclick="setHealthGender('male')">Male</button>
+                <button type="button" class="orn-toggle-btn" id="hcGenderFemale" onclick="setHealthGender('female')">Female</button>
+              </div>
+              <div class="fx-sub-box">
+                <span class="sub-label">Age (yrs)</span>
+                <input type="number" class="fx-amt-input tabular" id="hcAge" value="30" min="5" max="120" step="1" oninput="renderHealthCalculator()" placeholder="30" />
+              </div>
+            </div>
+
+            <!-- Row 2: Height & Weight -->
+            <div class="hc-grid-2">
+              <div class="fx-sub-box">
+                <span class="sub-label" id="hcHeightLbl">Height (cm)</span>
+                <input type="number" class="fx-amt-input tabular" id="hcHeightCm" value="170" min="50" max="260" step="0.5" oninput="renderHealthCalculator()" placeholder="170" />
+                <div class="hc-imp-ht" id="hcHeightImpWrap">
+                  <input type="number" class="tabular" id="hcHeightFt" value="5" min="1" max="8" step="1" oninput="renderHealthCalculator()" placeholder="ft" aria-label="Height Feet" />
+                  <input type="number" class="tabular" id="hcHeightIn" value="7" min="0" max="11.9" step="0.5" oninput="renderHealthCalculator()" placeholder="in" aria-label="Height Inches" />
+                </div>
+              </div>
+              <div class="fx-sub-box">
+                <span class="sub-label" id="hcWeightLbl">Weight (kg)</span>
+                <input type="number" class="fx-amt-input tabular" id="hcWeight" value="68" min="10" max="400" step="0.1" oninput="renderHealthCalculator()" placeholder="68" />
+              </div>
+            </div>
+
+            <!-- Row 3: Activity Level -->
+            <div class="fx-sub-box">
+              <span class="sub-label">Activity</span>
+              <div style="flex:1; min-width:0; max-width:220px;">
+                <select id="hcActivity" onchange="renderHealthCalculator()" aria-label="Activity Level">
+                  <option value="1.2">Sedentary (Little exercise)</option>
+                  <option value="1.375">Light (1–3 days/wk)</option>
+                  <option value="1.55" selected>Moderate (3–5 days/wk)</option>
+                  <option value="1.725">Active (6–7 days/wk)</option>
+                  <option value="1.9">Very Active (Physical job)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- BMI Card with Visual Scale -->
+            <div class="hc-bmi-card tabular">
+              <div class="hc-bmi-top">
+                <div style="display:flex; flex-direction:column; gap:2px;">
+                  <span class="sub-label">Body Mass Index (BMI)</span>
+                  <span class="result-price" id="hcBmiVal">23.5</span>
+                </div>
+                <span class="hc-bmi-pill normal" id="hcBmiBadge">Normal</span>
+              </div>
+              <div class="hc-bmi-track" aria-hidden="true">
+                <div class="hc-bmi-marker" id="hcBmiMarker" style="left:45%;"></div>
+              </div>
+              <div class="hc-bmi-scale-lbls">
+                <span>&lt;18.5 Under</span>
+                <span>18.5–24.9 Normal</span>
+                <span>25–29.9 Over</span>
+                <span>30+ Obese</span>
+              </div>
+            </div>
+
+            <!-- Key Health Metrics (2x2 Grid) -->
+            <div class="hc-grid-2 tabular">
+              <div class="hc-kpi-box">
+                <span class="sub-label">Healthy Weight</span>
+                <span class="hc-kpi-val accent" id="hcIdealWeight">53.5 – 72.0 kg</span>
+                <span class="hc-kpi-sub" id="hcIdealRef">BMI 18.5 – 24.9</span>
+              </div>
+              <div class="hc-kpi-box">
+                <span class="sub-label">Daily Water</span>
+                <span class="hc-kpi-val" id="hcWaterVal">2.4 L / day</span>
+                <span class="hc-kpi-sub" id="hcWaterGlasses">≈ 10 glasses (250 ml)</span>
+              </div>
+              <div class="hc-kpi-box">
+                <span class="sub-label">BMR (Resting)</span>
+                <span class="hc-kpi-val" id="hcBmrVal">1,603 kcal</span>
+                <span class="hc-kpi-sub">Mifflin-St Jeor</span>
+              </div>
+              <div class="hc-kpi-box">
+                <span class="sub-label">Maintenance</span>
+                <span class="hc-kpi-val accent" id="hcTdeeVal">2,485 kcal</span>
+                <span class="hc-kpi-sub">Daily TDEE</span>
+              </div>
+            </div>
+
+            <!-- Daily Calorie Goals -->
+            <div class="hc-grid-3 tabular">
+              <div class="dt-mini-slab">
+                <span class="dt-mini-val" id="hcCalLoss">1,985</span>
+                <span class="dt-mini-lbl">Loss (-500)</span>
+              </div>
+              <div class="dt-mini-slab">
+                <span class="dt-mini-val accent" id="hcCalMildLoss">2,235</span>
+                <span class="dt-mini-lbl">Mild (-250)</span>
+              </div>
+              <div class="dt-mini-slab">
+                <span class="dt-mini-val" id="hcCalGain">2,735</span>
+                <span class="dt-mini-lbl">Gain (+250)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL SLAB: ROMAN NUMERALS CONVERTER -->
+        <section class="tile util-slab" id="romanConverterSlab">
+          <div class="tool-slab-head">
+            <span class="tool-slab-title"><span class="util-head-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h6"/><path d="M8 5v14"/><path d="M5 19h6"/><path d="M14 5l5 14"/><path d="M19 5l-5 14"/></svg></span>Roman Numerals</span>
+            <button type="button" class="util-close-btn" onclick="closeUtilSlab()" title="Close">✕</button>
+          </div>
+
+          <div class="util-body">
+            <div class="fx-sub-box">
+              <span class="sub-label">Number (1–3999)</span>
+              <input type="number" class="fx-amt-input tabular" id="romanInput" value="2026" min="1" max="3999" step="1" oninput="renderRomanConverter()" placeholder="Enter number..." />
+              <button type="button" class="dt-today-btn" onclick="clearRomanInput()">Clear</button>
+            </div>
+
+            <div class="roman-err-msg" id="romanErrMsg"></div>
+
+            <div class="roman-result-box">
+              <div class="roman-result-head">
+                <span class="sub-label">Roman Numeral</span>
+                <button type="button" class="scanner-act-btn" id="romanCopyBtn" style="height:26px; padding:0 10px; font-size:11px;" onclick="copyRomanResult()">📋 Copy</button>
+              </div>
+              <div class="roman-result-val" id="romanResult">MMXXVI</div>
+            </div>
+
+            <div class="roman-ref-strip tabular">
+              <span class="roman-ref-pill"><strong>I</strong>=1</span>
+              <span class="roman-ref-pill"><strong>V</strong>=5</span>
+              <span class="roman-ref-pill"><strong>X</strong>=10</span>
+              <span class="roman-ref-pill"><strong>L</strong>=50</span>
+              <span class="roman-ref-pill"><strong>C</strong>=100</span>
+              <span class="roman-ref-pill"><strong>D</strong>=500</span>
+              <span class="roman-ref-pill"><strong>M</strong>=1000</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL SLAB: COUNTDOWN TIMER -->
+        <section class="tile util-slab" id="countdownSlab">
+          <div class="tool-slab-head">
+            <span class="tool-slab-title"><span class="util-head-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14"/><path d="M5 22h14"/><path d="M6 2v4a6 6 0 0 0 12 0V2"/><path d="M6 22v-4a6 6 0 0 1 12 0v4"/></svg></span>Countdown</span>
+            <div style="display:inline-flex; align-items:center; gap:6px;">
+              <span class="scanner-status-pill" id="cdStatusPill">Ready</span>
+              <button type="button" class="util-close-btn" onclick="closeUtilSlab()" title="Close">✕</button>
+            </div>
+          </div>
+
+          <div class="util-body">
+            <div class="tm-display-box tabular" id="cdDisplayBox">
+              <div class="tm-time-main" id="cdTimeDisplay">00:05:00</div>
+              <div class="tm-prog-track" aria-hidden="true">
+                <div class="tm-prog-fill" id="cdProgFill" style="width:100%;"></div>
+              </div>
+              <div class="tm-sub-line" id="cdSubLine">Set duration and tap Start</div>
+            </div>
+
+            <div class="tm-inputs-3 tabular" id="cdInputsWrap">
+              <div class="tm-unit-box">
+                <span class="sub-label">Hours</span>
+                <input type="number" id="cdHours" value="0" min="0" max="99" step="1" oninput="onCountdownInputChange()" aria-label="Hours" />
+              </div>
+              <div class="tm-unit-box">
+                <span class="sub-label">Minutes</span>
+                <input type="number" id="cdMinutes" value="5" min="0" max="59" step="1" oninput="onCountdownInputChange()" aria-label="Minutes" />
+              </div>
+              <div class="tm-unit-box">
+                <span class="sub-label">Seconds</span>
+                <input type="number" id="cdSeconds" value="0" min="0" max="59" step="1" oninput="onCountdownInputChange()" aria-label="Seconds" />
+              </div>
+            </div>
+
+            <div class="tm-presets">
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(1)">1m</button>
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(3)">3m</button>
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(5)">5m</button>
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(10)">10m</button>
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(15)">15m</button>
+              <button type="button" class="tm-preset-btn" onclick="setCountdownPreset(30)">30m</button>
+            </div>
+
+            <div class="tm-actions-row">
+              <button type="button" class="tm-act-btn primary" id="cdStartPauseBtn" onclick="toggleCountdown()">▶ Start</button>
+              <button type="button" class="tm-act-btn" onclick="addCountdownMinute()">+1 Min</button>
+              <button type="button" class="tm-act-btn" onclick="resetCountdown()">↺ Reset</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL SLAB: STOPWATCH -->
+        <section class="tile util-slab" id="stopwatchSlab">
+          <div class="tool-slab-head">
+            <span class="tool-slab-title"><span class="util-head-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5"/><path d="M9 2h6"/><path d="M12 2v3"/></svg></span>Stopwatch</span>
+            <div style="display:inline-flex; align-items:center; gap:6px;">
+              <span class="scanner-status-pill" id="swStatusPill">Ready</span>
+              <button type="button" class="util-close-btn" onclick="closeUtilSlab()" title="Close">✕</button>
+            </div>
+          </div>
+
+          <div class="util-body">
+            <div class="tm-display-box tabular">
+              <div class="tm-time-main">
+                <span id="swTimeMain">00:00:00</span><span class="tm-time-cs" id="swTimeCs">.00</span>
+              </div>
+              <div class="tm-sub-line" id="swLapLiveLine">Tap Start to begin timing</div>
+            </div>
+
+            <div class="tm-actions-row">
+              <button type="button" class="tm-act-btn primary" id="swStartPauseBtn" onclick="toggleStopwatch()">▶ Start</button>
+              <button type="button" class="tm-act-btn" id="swLapBtn" onclick="recordStopwatchLap()" disabled>🏁 Lap</button>
+              <button type="button" class="tm-act-btn" onclick="resetStopwatch()">↺ Reset</button>
+            </div>
+
+            <div class="sw-laps-wrap tabular" id="swLapsWrap">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:0 4px;">
+                <span class="sub-label">Laps</span>
+                <span class="sub-label">Split · Total</span>
+              </div>
+              <div class="sw-laps-list" id="swLapsList"></div>
             </div>
           </div>
         </section>
@@ -6271,84 +7508,110 @@
         </div>
       </section>
 
-      <!-- Data Backup & Restore (Offline & Online Sync — Pocket Vault Style) -->
-      <section class="tile tile-padded" data-slab-id="settingSync">
-        <div style="display:flex; flex-direction:column; gap:4px;">
-          <div class="tile-title"><span>Data Backup &amp; Restore</span></div>
-          <span class="setting-subtext">Back up your saved cities, custom percentages, ornament settings, and preferences locally or to Google Drive.</span>
-        </div>
+      <!-- Data Backup & Restore (Offline & Online Sync Slabs) -->
+      <section class="tile tile-padded" data-slab-id="settingSync" style="gap:14px;">
+        <div id="syncToast" style="display:none;"></div>
 
-        <div class="sync-toast" id="syncToast"></div>
-
-        <!-- Offline Sub-Card -->
-        <div class="sync-subcard">
-          <div class="sync-subhead">
-            <span class="sync-subhead-left"><span>💾</span><span>Offline</span></span>
-            <span class="sync-status-text" id="offlineFileStatus">No local file linked</span>
-          </div>
-          <span class="sync-status-text tabular" id="lastOfflineBackup">Last offline backup: Never</span>
-
-          <div class="sync-btn-row" style="flex-direction:column; align-items:flex-start;">
-            <button type="button" class="sync-btn-primary" onclick="exportBackupJson()">↓ Export Backup JSON</button>
-            <button type="button" class="sync-btn-secondary" onclick="document.getElementById('importJsonInput').click()">↑ Import Backup JSON</button>
-            <input type="file" id="importJsonInput" accept=".json,application/json" style="display:none;" onchange="importBackupJson(event)" />
-            <button type="button" class="sync-btn-secondary" onclick="saveAndSyncLocally()">🔄 Save &amp; Sync Locally</button>
-          </div>
-
-          <label class="sync-check-row">
-            <input type="checkbox" id="autoSyncLocalChk" onchange="toggleAutoSyncLocal()" />
-            <div style="display:flex; flex-direction:column; gap:2px;">
-              <span class="sync-check-title">Auto-sync local data to linked file every hour</span>
-              <span class="setting-subtext">Save &amp; sync a local file above to enable hourly auto-sync</span>
+        <!-- Offline Sync Slab -->
+        <div class="sync-card-v2" id="offlineSyncCard">
+          <div class="sync-card-head">
+            <div class="sync-card-head-left">
+              <span class="sync-card-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                  <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                  <polyline points="7 3 7 8 15 8"></polyline>
+                </svg>
+              </span>
+              <div class="sync-card-title-stack">
+                <span class="sync-card-title">Offline</span>
+                <span class="sync-card-sub tabular" id="lastOfflineBackup">Last offline backup: Never</span>
+              </div>
             </div>
+          </div>
+
+          <div class="sync-linked-line" id="offlineFileStatus">Linked: No local file linked</div>
+
+          <div class="sync-btn-stack">
+            <button type="button" class="sync-stack-btn primary" onclick="exportBackupJson()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Export Backup JSON</span>
+            </button>
+
+            <button type="button" class="sync-stack-btn dark" onclick="document.getElementById('importJsonInput').click()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <span>Import Backup JSON</span>
+            </button>
+            <input type="file" id="importJsonInput" accept=".json,application/json" style="display:none;" onchange="importBackupJson(event)" />
+
+            <button type="button" class="sync-stack-btn soft" onclick="saveAndSyncLocally()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              <span>Save &amp; Sync Locally</span>
+            </button>
+          </div>
+
+          <div class="sync-path-group">
+            <label class="sync-path-label" for="offlineFolderPathInput">Offline Folder Path</label>
+            <div class="sync-path-row">
+              <input type="text" class="sync-path-input" id="offlineFolderPathInput" placeholder="Pocket Tools" oninput="saveOfflineFolderPath()" />
+              <button type="button" class="sync-side-btn" id="pickOfflineFolderBtn" onclick="pickOfflineFolder()">
+                <span aria-hidden="true">📁</span>
+                <span>Folder</span>
+              </button>
+            </div>
+          </div>
+
+          <label class="sync-check-v2">
+            <input type="checkbox" id="autoSyncLocalChk" onchange="toggleAutoSyncLocal()" />
+            <span>Auto-sync local data with linked file after every changes</span>
           </label>
         </div>
 
-        <!-- Online (Google Drive) Sub-Card -->
-        <div class="sync-subcard" id="driveSyncCard">
-          <div class="sync-subhead">
-            <span class="sync-subhead-left">
-              <span>☁</span><span>Google Drive</span>
-              <span class="drive-conn-pill" id="driveConnPill">Not Connected</span>
-            </span>
-            <button type="button" class="pill-btn" style="height:26px; font-size:11px; padding:0 10px;" onclick="toggleDriveGuide()">? Setup Guide</button>
+        <!-- Online (Google Drive) Sync Slab -->
+        <div class="sync-card-v2" id="driveSyncCard">
+          <div class="sync-card-head">
+            <div class="sync-card-head-left" style="gap:8px; flex-wrap:wrap;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              <span class="sync-card-title" style="font-size:16px;">Google Drive</span>
+              <span class="sync-conn-badge" id="driveConnPill">Not Connected</span>
+            </div>
+            <button type="button" class="sync-guide-btn" onclick="toggleDriveGuide()">? Setup Guide</button>
           </div>
-          <span class="sync-status-text tabular" id="lastDriveSync">Last Google Drive sync: Never</span>
+
+          <span class="sync-card-sub tabular" id="lastDriveSync">Last Google Drive sync: Never</span>
 
           <div class="setup-guide-box" id="driveSetupGuide">
             <strong>One-time setup (2 minutes):</strong><br/>
             1. Open <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener" style="color:var(--accent);">Google Cloud Console</a>, enable the <strong>Google Drive API</strong>, and create an <strong>OAuth 2.0 Client ID</strong> (Web Application).<br/>
             2. Add your app URL (e.g., <code>https://yourdomain.com</code> or <code>http://localhost</code>) under <strong>Authorized JavaScript Origins</strong>.<br/>
-            3. Paste the Client ID once below — after that, clicking <strong>One-Click Sync</strong> (here or in the top bar) connects and two-way syncs <code>My Drive / Pocket Tools Backup / pocket-tools-backup.json</code> automatically.
+            3. Paste the Client ID once below — after that, clicking <strong>One-Click Sync</strong> connects and two-way syncs <code>pocket-tools-backup.json</code> inside your chosen <strong>Drive Folder Path</strong>.
           </div>
 
-          <button type="button" class="sync-btn-primary drive-oneclick-btn" id="oneClickDriveBtn" onclick="oneClickDriveSync()">☁ One-Click Sync with Google Drive</button>
+          <button type="button" class="sync-stack-btn primary" id="oneClickDriveBtn" onclick="oneClickDriveSync()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            <span>One-Click Sync with Google Drive</span>
+          </button>
 
-          <div class="drive-input-row">
-            <input type="text" id="driveClientIdInput" placeholder="Google OAuth Client ID (one-time setup)" oninput="saveDriveClientId()" />
-            <button type="button" class="sync-btn-secondary" id="connectDriveBtn" onclick="connectGoogleDrive()">🔗 Connect</button>
+          <div class="sync-path-row">
+            <input type="text" class="sync-path-input" id="driveClientIdInput" placeholder="Google OAuth Client ID (one-time setup)" oninput="saveDriveClientId()" />
+            <button type="button" class="sync-side-btn" id="connectDriveBtn" onclick="connectGoogleDrive()">
+              <span aria-hidden="true">🔗</span>
+              <span>Connect</span>
+            </button>
           </div>
 
-          <div class="sync-btn-row">
-            <button type="button" class="sync-btn-secondary" onclick="backupToDrive()">☁ Back Up Now</button>
-            <button type="button" class="sync-btn-secondary" onclick="restoreFromDrive()">⬇ Restore Now</button>
-            <button type="button" class="sync-btn-secondary" id="disconnectDriveBtn" style="display:none;" onclick="disconnectGoogleDrive()">Disconnect</button>
+          <div class="sync-btn-row" id="disconnectDriveRow" style="display:none;">
+            <button type="button" class="sync-btn-secondary" id="disconnectDriveBtn" onclick="disconnectGoogleDrive()">Disconnect Google Drive</button>
           </div>
 
-          <label class="sync-check-row">
+          <div class="sync-path-group">
+            <label class="sync-path-label" for="driveFolderPathInput">Drive Folder Path</label>
+            <input type="text" class="sync-path-input" id="driveFolderPathInput" placeholder="Apps/Pocket Apps/Backups/Pocket Tools" oninput="saveDriveFolderPath()" />
+          </div>
+
+          <label class="sync-check-v2">
             <input type="checkbox" id="autoSyncDriveChk" onchange="toggleAutoSyncDrive()" />
-            <div style="display:flex; flex-direction:column; gap:2px;">
-              <span class="sync-check-title">Auto-sync with Google Drive after changes</span>
-              <span class="setting-subtext">Automatically syncs changes to Drive while connected</span>
-            </div>
-          </label>
-
-          <label class="sync-check-row">
-            <input type="checkbox" id="autoSyncDriveHourlyChk" onchange="toggleAutoSyncDriveHourly()" />
-            <div style="display:flex; flex-direction:column; gap:2px;">
-              <span class="sync-check-title">Auto-sync local data to Google Drive every hour</span>
-              <span class="setting-subtext" id="driveHourlyNextLabel">Connect Google Drive above to enable hourly auto-sync</span>
-            </div>
+            <span>Auto-sync with Google Drive after changes</span>
           </label>
         </div>
       </section>
@@ -6831,6 +8094,8 @@
       wcCity: initialActiveIntlCity,
       indianCity: localStorage.getItem("pt_v26_indian_city") || "Kolkata",
       autoDetectedCity: localStorage.getItem("pt_v26_auto_city") || "Kolkata",
+      liveLat: (localStorage.getItem("pt_v69_live_lat") !== null && !isNaN(parseFloat(localStorage.getItem("pt_v69_live_lat")))) ? parseFloat(localStorage.getItem("pt_v69_live_lat")) : null,
+      liveLon: (localStorage.getItem("pt_v69_live_lon") !== null && !isNaN(parseFloat(localStorage.getItem("pt_v69_live_lon")))) ? parseFloat(localStorage.getItem("pt_v69_live_lon")) : null,
       refreshInterval: localStorage.getItem("pt_v26_interval") || "1s",
       goldPurity: (savedGP && savedGP in VALID_GOLD_PURITIES) ? savedGP : "24",
       goldWeight: (savedGW && savedGW in VALID_GOLD_WEIGHTS) ? savedGW : "10",
@@ -7295,6 +8560,9 @@
       if (valid !== "utilities" && typeof toggleToolsReorderMode === "function" && toolsReorderActive) {
         toggleToolsReorderMode(false);
       }
+      if (valid !== "utilities" && typeof stopScannerCamera === "function") {
+        stopScannerCamera();
+      }
 
       document.getElementById("view-tools").classList.toggle("active", valid === "tools");
       document.getElementById("view-utilities").classList.toggle("active", valid === "utilities");
@@ -7608,6 +8876,7 @@
     function updateLocationUI() {
       document.getElementById("locTriggerText").textContent = state.city;
       document.getElementById("locAutoHint").textContent = state.autoDetectedCity;
+      updateWeatherCoordsUI();
       updateFxHeaderMeta();
       renderWorldClock();
     }
@@ -7721,6 +8990,7 @@
       hint.textContent = "Locating...";
       navigator.geolocation.getCurrentPosition(
         (pos) => {
+          recordLiveCoords(pos.coords.latitude, pos.coords.longitude);
           const nearest = findNearestCity(pos.coords.latitude, pos.coords.longitude, false);
           state.autoDetectedCity = nearest;
           localStorage.setItem("pt_v26_auto_city", nearest);
@@ -7921,6 +9191,7 @@
       if (hint) hint.textContent = "Locating...";
       navigator.geolocation.getCurrentPosition(
         (pos) => {
+          recordLiveCoords(pos.coords.latitude, pos.coords.longitude);
           const nearest = findNearestCity(pos.coords.latitude, pos.coords.longitude, false);
           state.autoDetectedCity = nearest;
           localStorage.setItem("pt_v26_auto_city", nearest);
@@ -8700,8 +9971,38 @@
 
     const LOCAL_MOD_KEY = "pt_v61_local_modified_at";
 
+    const OFFLINE_FOLDER_PATH_KEY = "pt_v70_offline_folder_path";
+    const DRIVE_FOLDER_PATH_KEY = "pt_v70_drive_folder_path";
+    const DEFAULT_OFFLINE_FOLDER = "Pocket Tools";
+    const DEFAULT_DRIVE_FOLDER_PATH = "Apps/Pocket Apps/Backups/Pocket Tools";
+    let localDirHandle = null;
+    let autoLocalSyncTimer = null;
+
+    function getOfflineFolderPath() {
+      const inp = document.getElementById("offlineFolderPathInput");
+      const val = ((inp && inp.value) || localStorage.getItem(OFFLINE_FOLDER_PATH_KEY) || DEFAULT_OFFLINE_FOLDER).trim();
+      return val || DEFAULT_OFFLINE_FOLDER;
+    }
+
+    function saveOfflineFolderPath() {
+      const val = (document.getElementById("offlineFolderPathInput")?.value || "").trim();
+      localStorage.setItem(OFFLINE_FOLDER_PATH_KEY, val || DEFAULT_OFFLINE_FOLDER);
+    }
+
+    function getDriveFolderPath() {
+      const inp = document.getElementById("driveFolderPathInput");
+      const val = ((inp && inp.value) || localStorage.getItem(DRIVE_FOLDER_PATH_KEY) || DEFAULT_DRIVE_FOLDER_PATH).trim();
+      return val || DEFAULT_DRIVE_FOLDER_PATH;
+    }
+
+    function saveDriveFolderPath() {
+      const val = (document.getElementById("driveFolderPathInput")?.value || "").trim();
+      localStorage.setItem(DRIVE_FOLDER_PATH_KEY, val || DEFAULT_DRIVE_FOLDER_PATH);
+    }
+
     function markLocalModified() {
       try { localStorage.setItem(LOCAL_MOD_KEY, new Date().toISOString()); } catch (_) {}
+      scheduleAutoLocalSync();
       scheduleAutoDriveSync();
     }
 
@@ -8719,16 +10020,18 @@
       return d.toLocaleString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
     }
 
-    function showSyncToast(msg) {
+    function showSyncToast(msg, type = "success") {
       const el = document.getElementById("syncToast");
-      if (el) {
-        el.textContent = msg;
-        clearTimeout(el._t);
-        el._t = setTimeout(() => { el.textContent = ""; }, 4500);
-      }
+      if (el) el.textContent = "";
       const gEl = document.getElementById("globalSyncToast");
       if (gEl && msg) {
         gEl.textContent = msg;
+        gEl.classList.remove("err", "info");
+        if (type === "error" || /fail|invalid|unable|offline|cancel|closed|blocked|no backup|paste your/i.test(msg)) {
+          if (type !== "success") gEl.classList.add("err");
+        } else if (type === "info") {
+          gEl.classList.add("info");
+        }
         gEl.classList.add("show");
         clearTimeout(gEl._t);
         gEl._t = setTimeout(() => { gEl.classList.remove("show"); }, 3400);
@@ -8743,6 +10046,22 @@
       if (offEl) offEl.textContent = `Last offline backup: ${offTs || "Never"}`;
       if (drvEl) drvEl.textContent = `Last Google Drive sync: ${drvTs || "Never"}`;
 
+      const offPathInp = document.getElementById("offlineFolderPathInput");
+      if (offPathInp && !offPathInp.value) {
+        offPathInp.value = localStorage.getItem(OFFLINE_FOLDER_PATH_KEY) || DEFAULT_OFFLINE_FOLDER;
+      }
+
+      const drvPathInp = document.getElementById("driveFolderPathInput");
+      if (drvPathInp && !drvPathInp.value) {
+        drvPathInp.value = localStorage.getItem(DRIVE_FOLDER_PATH_KEY) || DEFAULT_DRIVE_FOLDER_PATH;
+      }
+
+      const linkedName = localDirHandle ? localDirHandle.name : (localFileHandle ? localFileHandle.name : "");
+      const statusEl = document.getElementById("offlineFileStatus");
+      if (statusEl) {
+        statusEl.textContent = linkedName ? `Linked: ${linkedName}` : "Linked: No local file linked";
+      }
+
       const cid = localStorage.getItem("pt_v29_drive_client_id") || "";
       const cidEl = document.getElementById("driveClientIdInput");
       if (cidEl && !cidEl.value) cidEl.value = cid;
@@ -8752,8 +10071,6 @@
 
       const autoDriveChk = document.getElementById("autoSyncDriveChk");
       if (autoDriveChk) autoDriveChk.checked = localStorage.getItem("pt_v61_auto_drive") === "true";
-      const autoDriveHourlyChk = document.getElementById("autoSyncDriveHourlyChk");
-      if (autoDriveHourlyChk) autoDriveHourlyChk.checked = localStorage.getItem("pt_v61_auto_drive_hourly") === "true";
 
       const remChk = document.getElementById("rememberStateToggle");
       if (remChk) remChk.checked = isRememberEnabled();
@@ -8761,7 +10078,7 @@
       updateDriveConnectionUI();
     }
 
-    /* Offline Backup & Local File Sync */
+    /* Offline Backup & Local Folder / File Sync */
     function exportBackupJson() {
       const payload = JSON.stringify(collectAppPayload(), null, 2);
       const blob = new Blob([payload], { type: "application/json" });
@@ -8773,7 +10090,7 @@
       const ts = formatBackupTime();
       localStorage.setItem("pt_v29_last_offline", ts);
       updateSyncTimestampsUI();
-      showSyncToast("Exported pocket-tools-backup.json");
+      showSyncToast("Exported pocket-tools-backup.json", "success");
     }
 
     function importBackupJson(evt) {
@@ -8791,72 +10108,109 @@
           updateIntervalUI();
           applyTheme();
           renderAll(false);
-          saveSessionSnapshot();
-          showSyncToast(`Imported backup from ${file.name}`);
+          saveSessionSnapshot(true);
+          showSyncToast(`Imported backup from ${file.name}`, "success");
         } catch (_) {
-          showSyncToast("Invalid JSON backup file.");
+          showSyncToast("Invalid JSON backup file.", "error");
         }
       };
       reader.readAsText(file);
       evt.target.value = "";
     }
 
-    async function writeToLinkedFile() {
-      if (!localFileHandle) return false;
+    async function writeToLinkedFile(silent = false) {
       try {
-        const writable = await localFileHandle.createWritable();
+        let targetHandle = localFileHandle;
+        let targetName = localFileHandle ? localFileHandle.name : "";
+        if (localDirHandle) {
+          targetHandle = await localDirHandle.getFileHandle("pocket-tools-backup.json", { create: true });
+          targetName = localDirHandle.name;
+        }
+        if (!targetHandle) return false;
+        const writable = await targetHandle.createWritable();
         await writable.write(JSON.stringify(collectAppPayload(), null, 2));
         await writable.close();
         const ts = formatBackupTime();
         localStorage.setItem("pt_v29_last_offline", ts);
         updateSyncTimestampsUI();
+        if (!silent) showSyncToast(`Synced locally to ${targetName || getOfflineFolderPath()}`, "success");
         return true;
       } catch (_) {
         return false;
       }
     }
 
+    async function pickOfflineFolder() {
+      if ("showDirectoryPicker" in window) {
+        try {
+          localDirHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+          localFileHandle = null;
+          const folderName = localDirHandle.name || getOfflineFolderPath();
+          const inp = document.getElementById("offlineFolderPathInput");
+          if (inp) inp.value = folderName;
+          localStorage.setItem(OFFLINE_FOLDER_PATH_KEY, folderName);
+          const ok = await writeToLinkedFile(false);
+          if (!ok) showSyncToast("Could not write to selected folder.", "error");
+        } catch (err) {
+          if (err && err.name !== "AbortError") saveAndSyncLocally();
+        }
+      } else {
+        saveAndSyncLocally();
+      }
+    }
+
     async function saveAndSyncLocally() {
-      if ("showSaveFilePicker" in window) {
+      if (localDirHandle || localFileHandle) {
+        const ok = await writeToLinkedFile(false);
+        if (ok) return;
+      }
+      if ("showDirectoryPicker" in window) {
+        await pickOfflineFolder();
+      } else if ("showSaveFilePicker" in window) {
         try {
           localFileHandle = await window.showSaveFilePicker({
             suggestedName: "pocket-tools-backup.json",
             types: [{ description: "JSON Backup", accept: { "application/json": [".json"] } }]
           });
-          const ok = await writeToLinkedFile();
-          if (ok) {
-            document.getElementById("offlineFileStatus").textContent = `Linked: ${localFileHandle.name}`;
-            showSyncToast(`Linked & synced to ${localFileHandle.name}`);
-            setupHourlyLocalSync();
-          }
+          localDirHandle = null;
+          const ok = await writeToLinkedFile(false);
+          if (!ok) showSyncToast("Could not write local backup file.", "error");
         } catch (err) {
           if (err && err.name !== "AbortError") exportBackupJson();
         }
       } else {
         exportBackupJson();
-        showSyncToast("Direct file linking unsupported on this browser — downloaded JSON instead.");
+        showSyncToast(`Synced locally to ${getOfflineFolderPath()}`, "success");
       }
     }
 
     function toggleAutoSyncLocal() {
-      const checked = document.getElementById("autoSyncLocalChk").checked;
+      const checked = Boolean(document.getElementById("autoSyncLocalChk")?.checked);
       localStorage.setItem("pt_v29_auto_local", String(checked));
-      setupHourlyLocalSync();
-      showSyncToast(checked ? "Hourly local auto-sync enabled." : "Hourly local auto-sync disabled.");
-    }
-
-    function setupHourlyLocalSync() {
-      if (localAutoSyncTimer) { clearInterval(localAutoSyncTimer); localAutoSyncTimer = null; }
-      if (localStorage.getItem("pt_v29_auto_local") === "true" && localFileHandle) {
-        localAutoSyncTimer = setInterval(() => { writeToLinkedFile(); }, 3600000);
+      if (checked) {
+        showSyncToast("Local auto-sync after changes enabled.", "success");
+        scheduleAutoLocalSync();
+      } else {
+        clearTimeout(autoLocalSyncTimer);
+        showSyncToast("Local auto-sync disabled.", "info");
       }
     }
 
-    /* Online (Google Drive AppData) One-Click Two-Way Sync */
+    function scheduleAutoLocalSync() {
+      if (localStorage.getItem("pt_v29_auto_local") !== "true") return;
+      if (!localDirHandle && !localFileHandle) return;
+      clearTimeout(autoLocalSyncTimer);
+      autoLocalSyncTimer = setTimeout(() => {
+        writeToLinkedFile(false);
+      }, 1500);
+    }
+
+    function setupHourlyLocalSync() {}
+
+    /* Online (Google Drive) One-Click Two-Way Sync */
     let driveTokenExpiry = 0;
     let driveSyncBusy = false;
     let autoDriveSyncTimer = null;
-    const DRIVE_FOLDER_NAME = "Pocket Tools Backup";
     const DRIVE_BACKUP_NAME = "pocket-tools-backup.json";
 
     function toggleDriveGuide(forceOpen) {
@@ -8880,14 +10234,17 @@
       const isConnected = Boolean(driveAccessToken && Date.now() < driveTokenExpiry);
       const pill = document.getElementById("driveConnPill");
       const connBtn = document.getElementById("connectDriveBtn");
-      const discBtn = document.getElementById("disconnectDriveBtn");
+      const discRow = document.getElementById("disconnectDriveRow");
       if (pill) {
         pill.textContent = isConnected ? "Connected" : "Not Connected";
         pill.classList.toggle("connected", isConnected);
       }
-      if (connBtn) connBtn.textContent = isConnected ? "✓ Connected" : "🔗 Connect";
-      if (discBtn) discBtn.style.display = isConnected ? "inline-flex" : "none";
-      setupHourlyDriveSync();
+      if (connBtn) {
+        connBtn.innerHTML = isConnected
+          ? '<span aria-hidden="true">✓</span><span>Connected</span>'
+          : '<span aria-hidden="true">🔗</span><span>Connect</span>';
+      }
+      if (discRow) discRow.style.display = isConnected ? "flex" : "none";
     }
 
     function setDriveSyncVisual(mode) {
@@ -8908,13 +10265,14 @@
       }
       if (mainBtn) {
         mainBtn.disabled = mode === "syncing";
-        if (mode === "syncing") mainBtn.textContent = "⏳ Syncing with Google Drive...";
+        const cloudSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>';
+        if (mode === "syncing") mainBtn.innerHTML = '<span>⏳ Syncing with Google Drive...</span>';
         else if (mode === "synced") {
-          mainBtn.textContent = "✓ Synced with Google Drive";
+          mainBtn.innerHTML = '<span>✓ Synced with Google Drive</span>';
           clearTimeout(mainBtn._t);
-          mainBtn._t = setTimeout(() => { mainBtn.textContent = "☁ One-Click Sync with Google Drive"; }, 2200);
+          mainBtn._t = setTimeout(() => { mainBtn.innerHTML = `${cloudSvg}<span>One-Click Sync with Google Drive</span>`; }, 2200);
         } else {
-          mainBtn.textContent = "☁ One-Click Sync with Google Drive";
+          mainBtn.innerHTML = `${cloudSvg}<span>One-Click Sync with Google Drive</span>`;
         }
       }
     }
@@ -8993,9 +10351,9 @@
     async function connectGoogleDrive() {
       try {
         await ensureDriveToken(true, true);
-        showSyncToast("Connected to Google Drive.");
+        showSyncToast("Connected to Google Drive", "success");
       } catch (err) {
-        showSyncToast(err.message || "Unable to connect to Google Drive.");
+        showSyncToast(err.message || "Unable to connect to Google Drive.", "error");
       }
     }
 
@@ -9007,7 +10365,7 @@
       driveTokenExpiry = 0;
       localStorage.removeItem("pt_v63_drive_file_authorized");
       updateDriveConnectionUI();
-      showSyncToast("Disconnected from Google Drive.");
+      showSyncToast("Disconnected from Google Drive", "info");
     }
 
     async function driveFetchWithAuth(url, options = {}, interactive = true) {
@@ -9027,34 +10385,45 @@
     }
 
     async function findOrCreateDriveFolder(interactive = true) {
-      const q = encodeURIComponent(
-        `name='${DRIVE_FOLDER_NAME}' and mimeType='application/vnd.google-apps.folder' and 'root' in parents and trashed=false`
-      );
-      const res = await driveFetchWithAuth(
-        `https://www.googleapis.com/drive/v3/files?spaces=drive&q=${q}&fields=files(id,name)`,
-        {},
-        interactive
-      );
-      if (!res.ok) throw new Error("Drive folder lookup failed");
-      const json = await res.json();
-      if (json.files && json.files[0]) return json.files[0].id;
+      const pathStr = getDriveFolderPath();
+      const segments = pathStr.split("/").map(s => s.trim()).filter(Boolean);
+      const parts = segments.length ? segments : ["Pocket Tools"];
+      let parentId = "root";
 
-      const createRes = await driveFetchWithAuth(
-        "https://www.googleapis.com/drive/v3/files?fields=id,name",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: DRIVE_FOLDER_NAME,
-            mimeType: "application/vnd.google-apps.folder",
-            parents: ["root"]
-          })
-        },
-        interactive
-      );
-      if (!createRes.ok) throw new Error("Could not create Drive backup folder");
-      const created = await createRes.json();
-      return created.id;
+      for (const seg of parts) {
+        const safeSeg = seg.replace(/'/g, "\'");
+        const q = encodeURIComponent(
+          `name='${safeSeg}' and mimeType='application/vnd.google-apps.folder' and '${parentId}' in parents and trashed=false`
+        );
+        const res = await driveFetchWithAuth(
+          `https://www.googleapis.com/drive/v3/files?spaces=drive&q=${q}&fields=files(id,name)`,
+          {},
+          interactive
+        );
+        if (!res.ok) throw new Error("Drive folder lookup failed");
+        const json = await res.json();
+        if (json.files && json.files[0]) {
+          parentId = json.files[0].id;
+        } else {
+          const createRes = await driveFetchWithAuth(
+            "https://www.googleapis.com/drive/v3/files?fields=id,name",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                name: seg,
+                mimeType: "application/vnd.google-apps.folder",
+                parents: [parentId]
+              })
+            },
+            interactive
+          );
+          if (!createRes.ok) throw new Error("Could not create Drive backup folder");
+          const created = await createRes.json();
+          parentId = created.id;
+        }
+      }
+      return parentId;
     }
 
     async function findDriveBackupFile(interactive = true) {
@@ -9111,7 +10480,7 @@
       if (driveSyncBusy) return;
       driveSyncBusy = true;
       setDriveSyncVisual("syncing");
-      if (!silent) showSyncToast("Syncing with Google Drive...");
+      if (!silent) showSyncToast("Syncing with Google Drive...", "info");
 
       try {
         const remoteFile = await findDriveBackupFile(!silent);
@@ -9124,7 +10493,7 @@
           localStorage.setItem("pt_v29_last_drive", formatBackupTime());
           updateSyncTimestampsUI();
           setDriveSyncVisual("synced");
-          if (!silent) showSyncToast("Synced: Uploaded backup to Google Drive.");
+          showSyncToast("Synced with Google Drive", "success");
           return;
         }
 
@@ -9136,7 +10505,6 @@
         if (!dlRes.ok) throw new Error("Download failed");
         const cloudData = await dlRes.json();
 
-        // Merge histories & custom cities so no data is ever lost across devices
         const mergedRawHistory = { ...(cloudData.rawHistory || {}), ...(localPayload.rawHistory || {}) };
         const mergedFxHistory = { ...(cloudData.fxHistory || {}), ...(localPayload.fxHistory || {}) };
         const mergedCities = { ...(cloudData.customCities || {}), ...(localPayload.customCities || {}) };
@@ -9154,7 +10522,6 @@
           applyCloudDataToUI(mergedCloud);
           localStorage.setItem(LOCAL_MOD_KEY, cloudData.savedAt || new Date().toISOString());
 
-          // If local had extra history/cities not in cloud, push merged record back
           const hadLocalExtras =
             Object.keys(mergedRawHistory).length > Object.keys(cloudData.rawHistory || {}).length ||
             Object.keys(mergedFxHistory).length > Object.keys(cloudData.fxHistory || {}).length ||
@@ -9165,7 +10532,7 @@
           localStorage.setItem("pt_v29_last_drive", formatBackupTime());
           updateSyncTimestampsUI();
           setDriveSyncVisual("synced");
-          if (!silent) showSyncToast("Synced: Restored newer Google Drive backup.");
+          showSyncToast("Synced with Google Drive", "success");
         } else {
           const mergedLocal = {
             ...localPayload,
@@ -9181,35 +10548,18 @@
           localStorage.setItem("pt_v29_last_drive", formatBackupTime());
           updateSyncTimestampsUI();
           setDriveSyncVisual("synced");
-          if (!silent) showSyncToast("Synced with Google Drive.");
+          showSyncToast("Synced with Google Drive", "success");
         }
       } catch (err) {
         setDriveSyncVisual("error");
-        if (!silent) showSyncToast(err.message || "Google Drive sync failed. Try again.");
+        if (!silent) showSyncToast(err.message || "Google Drive sync failed. Try again.", "error");
       } finally {
         driveSyncBusy = false;
       }
     }
 
     async function backupToDrive() {
-      if (driveSyncBusy) return;
-      driveSyncBusy = true;
-      setDriveSyncVisual("syncing");
-      try {
-        const existing = await findDriveBackupFile(true);
-        const payload = collectAppPayload();
-        await uploadPayloadToDrive(payload, existing ? existing.id : null, true);
-        localStorage.setItem(LOCAL_MOD_KEY, payload.savedAt);
-        localStorage.setItem("pt_v29_last_drive", formatBackupTime());
-        updateSyncTimestampsUI();
-        setDriveSyncVisual("synced");
-        showSyncToast("Backed up to Google Drive.");
-      } catch (err) {
-        setDriveSyncVisual("error");
-        showSyncToast(err.message || "Drive backup failed. Try again.");
-      } finally {
-        driveSyncBusy = false;
-      }
+      await oneClickDriveSync(false);
     }
 
     async function restoreFromDrive() {
@@ -9220,7 +10570,7 @@
         const file = await findDriveBackupFile(true);
         if (!file) {
           setDriveSyncVisual("idle");
-          showSyncToast("No backup found in Google Drive.");
+          showSyncToast("No backup found in Google Drive.", "error");
           return;
         }
         const res = await driveFetchWithAuth(`https://www.googleapis.com/drive/v3/files/${file.id}?alt=media`, {}, true);
@@ -9231,10 +10581,10 @@
         localStorage.setItem("pt_v29_last_drive", formatBackupTime());
         updateSyncTimestampsUI();
         setDriveSyncVisual("synced");
-        showSyncToast("Restored backup from Google Drive.");
+        showSyncToast("Restored backup from Google Drive", "success");
       } catch (err) {
         setDriveSyncVisual("error");
-        showSyncToast(err.message || "Drive restore failed. Try again.");
+        showSyncToast(err.message || "Drive restore failed. Try again.", "error");
       } finally {
         driveSyncBusy = false;
       }
@@ -9247,7 +10597,7 @@
     function toggleAutoSyncDrive() {
       const checked = Boolean(document.getElementById("autoSyncDriveChk")?.checked);
       localStorage.setItem("pt_v61_auto_drive", String(checked));
-      showSyncToast(checked ? "Auto-sync with Google Drive enabled." : "Auto-sync with Google Drive disabled.");
+      showSyncToast(checked ? "Auto-sync with Google Drive enabled." : "Auto-sync with Google Drive disabled.", checked ? "success" : "info");
       if (checked && driveAccessToken) scheduleAutoDriveSync();
     }
 
@@ -9260,63 +10610,8 @@
       }, 5000);
     }
 
-    let hourlyDriveSyncTimer = null;
-    let nextHourlyDriveSyncAt = 0;
-
-    function formatHourlyTimeHHMM(ts) {
-      if (!ts) return "--:--";
-      try {
-        return new Date(ts).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
-      } catch (_) {
-        return "--:--";
-      }
-    }
-
-    function updateHourlyDriveStatusUI() {
-      const lbl = document.getElementById("driveHourlyNextLabel");
-      if (!lbl) return;
-      const enabled = localStorage.getItem("pt_v61_auto_drive_hourly") === "true";
-      const isConnected = Boolean(driveAccessToken && Date.now() < driveTokenExpiry);
-      if (!enabled) {
-        lbl.textContent = isConnected
-          ? "Hourly Google Drive auto-sync is off"
-          : "Connect Google Drive above to enable hourly auto-sync";
-      } else if (!isConnected) {
-        lbl.textContent = "Connect Google Drive above to enable hourly auto-sync";
-      } else {
-        lbl.textContent = `Next hourly sync: ${formatHourlyTimeHHMM(nextHourlyDriveSyncAt)}`;
-      }
-    }
-
-    function setupHourlyDriveSync() {
-      if (hourlyDriveSyncTimer) {
-        clearInterval(hourlyDriveSyncTimer);
-        hourlyDriveSyncTimer = null;
-      }
-      const enabled = localStorage.getItem("pt_v61_auto_drive_hourly") === "true";
-      const isConnected = Boolean(driveAccessToken && Date.now() < driveTokenExpiry);
-      if (enabled && isConnected) {
-        const HOUR_MS = 60 * 60 * 1000;
-        nextHourlyDriveSyncAt = Date.now() + HOUR_MS;
-        hourlyDriveSyncTimer = setInterval(() => {
-          if (!driveSyncBusy && isAppOnline && driveAccessToken && Date.now() < driveTokenExpiry - 60000) {
-            oneClickDriveSync(true);
-          }
-          nextHourlyDriveSyncAt = Date.now() + HOUR_MS;
-          updateHourlyDriveStatusUI();
-        }, HOUR_MS);
-      } else {
-        nextHourlyDriveSyncAt = 0;
-      }
-      updateHourlyDriveStatusUI();
-    }
-
-    function toggleAutoSyncDriveHourly() {
-      const checked = Boolean(document.getElementById("autoSyncDriveHourlyChk")?.checked);
-      localStorage.setItem("pt_v61_auto_drive_hourly", String(checked));
-      setupHourlyDriveSync();
-      showSyncToast(checked ? "Hourly Google Drive auto-sync enabled." : "Hourly Google Drive auto-sync disabled.");
-    }
+    function setupHourlyDriveSync() {}
+    function toggleAutoSyncDriveHourly() {}
 
 
     /* =====================================================================
@@ -10323,6 +11618,7 @@
       navigator.geolocation.getCurrentPosition(
         (pos) => {
           localStorage.setItem(LOC_PERM_PROMPT_KEY, "granted");
+          recordLiveCoords(pos.coords.latitude, pos.coords.longitude);
           const nearest = findNearestCity(pos.coords.latitude, pos.coords.longitude, false);
           state.autoDetectedCity = nearest;
           localStorage.setItem("pt_v26_auto_city", nearest);
@@ -10748,10 +12044,18 @@
       const wrap = document.getElementById("utilExpandedWrap");
       if (wrap) wrap.classList.add("open");
 
+      if (toolKey !== "scanner" && typeof stopScannerCamera === "function") {
+        stopScannerCamera();
+      }
       const map = {
         uc: "unitConverterSlab",
         calc: "calculatorSlab",
         compass: "compassSlab",
+        scanner: "scannerSlab",
+        health: "healthCalculatorSlab",
+        roman: "romanConverterSlab",
+        countdown: "countdownSlab",
+        stopwatch: "stopwatchSlab",
         emi: "emiCalculatorSlab",
         zakat: "zakatCalculatorSlab",
         age: "ageCalculatorSlab",
@@ -10770,6 +12074,11 @@
       if (toolKey === "uc") renderUnitConverter();
       if (toolKey === "calc") updateCalcDisplay();
       if (toolKey === "compass") startCompassSensor(false);
+      if (toolKey === "scanner") openScannerTool();
+      if (toolKey === "health") renderHealthCalculator();
+      if (toolKey === "roman") renderRomanConverter();
+      if (toolKey === "countdown") renderCountdownUI();
+      if (toolKey === "stopwatch") renderStopwatchUI();
       if (toolKey === "emi") renderEmiCalculator();
       if (toolKey === "zakat") renderZakatCalculator();
       if (toolKey === "age") renderAgeCalculator();
@@ -10780,14 +12089,15 @@
     }
 
     function closeUtilSlab() {
+      if (typeof stopScannerCamera === "function") stopScannerCamera();
       activeUtilTool = null;
       const wrap = document.getElementById("utilExpandedWrap");
       if (wrap) wrap.classList.remove("open");
-      ["unitConverterSlab", "calculatorSlab", "compassSlab", "emiCalculatorSlab", "zakatCalculatorSlab", "ageCalculatorSlab", "daysCalculatorSlab", "dayFinderSlab", "lunarCalendarSlab", "calendarSlab"].forEach(id => {
+      ["unitConverterSlab", "calculatorSlab", "compassSlab", "scannerSlab", "healthCalculatorSlab", "romanConverterSlab", "countdownSlab", "stopwatchSlab", "emiCalculatorSlab", "zakatCalculatorSlab", "ageCalculatorSlab", "daysCalculatorSlab", "dayFinderSlab", "lunarCalendarSlab", "calendarSlab"].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.remove("open");
       });
-      ["sqTile-uc", "sqTile-calc", "sqTile-compass", "sqTile-emi", "sqTile-zakat", "sqTile-age", "sqTile-days", "sqTile-dayfinder", "sqTile-lunar", "sqTile-calendar"].forEach(id => {
+      ["sqTile-uc", "sqTile-calc", "sqTile-compass", "sqTile-scanner", "sqTile-health", "sqTile-roman", "sqTile-countdown", "sqTile-stopwatch", "sqTile-emi", "sqTile-zakat", "sqTile-age", "sqTile-days", "sqTile-dayfinder", "sqTile-lunar", "sqTile-calendar"].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.remove("active");
       });
@@ -12441,6 +13751,40 @@
       return { cls: "aqi-bad", label: "Hazardous" };
     }
 
+    function formatLatLonCompact(lat, lon) {
+      if (typeof lat !== "number" || typeof lon !== "number" || isNaN(lat) || isNaN(lon)) return "";
+      const ns = lat >= 0 ? "N" : "S";
+      const ew = lon >= 0 ? "E" : "W";
+      return `${Math.abs(lat).toFixed(4)}°${ns}, ${Math.abs(lon).toFixed(4)}°${ew}`;
+    }
+
+    function recordLiveCoords(lat, lon) {
+      if (typeof lat !== "number" || typeof lon !== "number" || isNaN(lat) || isNaN(lon)) return;
+      state.liveLat = lat;
+      state.liveLon = lon;
+      try {
+        localStorage.setItem("pt_v69_live_lat", String(lat));
+        localStorage.setItem("pt_v69_live_lon", String(lon));
+      } catch (_) {}
+      updateWeatherCoordsUI();
+    }
+
+    function updateWeatherCoordsUI() {
+      const el = document.getElementById("wxLiveCoords");
+      if (!el) return;
+      let lat = state.liveLat;
+      let lon = state.liveLon;
+      let isGps = (typeof lat === "number" && typeof lon === "number" && !isNaN(lat) && !isNaN(lon));
+      if (!isGps) {
+        const all = getAllCities();
+        const cInfo = all[state.autoDetectedCity] || all[state.city] || CITY_DB["Kolkata"];
+        lat = typeof cInfo.lat === "number" ? cInfo.lat : 22.5726;
+        lon = typeof cInfo.lon === "number" ? cInfo.lon : 88.3639;
+      }
+      el.textContent = formatLatLonCompact(lat, lon);
+      el.title = `${isGps ? "Live GPS Location" : "Location Coordinates"}: ${lat.toFixed(4)}, ${lon.toFixed(4)}`;
+    }
+
     function renderWeatherUI(data, cityName) {
       const hdr = document.getElementById("wxHeaderMeta");
       const icEl = document.getElementById("wxIconMain");
@@ -12454,6 +13798,7 @@
       const cur = data.current || {};
       const info = wmoToInfo(cur.weather_code);
       if (hdr) hdr.textContent = `${cityName} · ${info.text}`;
+      updateWeatherCoordsUI();
       if (icEl) icEl.textContent = info.ic;
       tempEl.textContent = typeof cur.temperature_2m === "number" ? `${Math.round(cur.temperature_2m)}°C` : "--°C";
       if (humEl) humEl.textContent = typeof cur.relative_humidity_2m === "number" ? `${Math.round(cur.relative_humidity_2m)}%` : "--%";
@@ -12749,6 +14094,1048 @@
     }
 
     /* =====================================================================
+       QR & BARCODE SCANNER TOOL (LIVE CAMERA + UPLOADED PHOTO)
+       Uses native BarcodeDetector with automatic ZXing multi-format fallback
+       ===================================================================== */
+    let scannerStream = null;
+    let scannerFacingMode = "environment";
+    let scannerTorchOn = false;
+    let scannerRafId = null;
+    let scannerLastTick = 0;
+    let scannerDetector = null;
+    let scannerZxingReader = null;
+    let scannerZxingLoading = null;
+    let scannerLastValue = "";
+    let scannerHistory = [];
+    let scannerCanvas = null;
+
+    const SCANNER_WANTED_FORMATS = [
+      "qr_code", "ean_13", "ean_8", "upc_a", "upc_e",
+      "code_128", "code_39", "code_93", "codabar", "itf",
+      "data_matrix", "pdf417", "aztec"
+    ];
+
+    function setScannerStatus(pillText, detailText, mode = "") {
+      const pill = document.getElementById("scannerStatusPill");
+      const txt = document.getElementById("scannerStatusText");
+      if (pill) {
+        pill.textContent = pillText;
+        pill.className = "scanner-status-pill" + (mode ? " " + mode : "");
+      }
+      if (txt) txt.textContent = detailText;
+    }
+
+    async function getNativeBarcodeDetector() {
+      if (scannerDetector) return scannerDetector;
+      if (typeof window === "undefined" || !("BarcodeDetector" in window)) return null;
+      try {
+        let formats = SCANNER_WANTED_FORMATS;
+        if (typeof window.BarcodeDetector.getSupportedFormats === "function") {
+          const supported = await window.BarcodeDetector.getSupportedFormats();
+          const filtered = SCANNER_WANTED_FORMATS.filter(f => supported.includes(f));
+          if (filtered.length) formats = filtered;
+        }
+        scannerDetector = new window.BarcodeDetector({ formats });
+        return scannerDetector;
+      } catch (_) {
+        try {
+          scannerDetector = new window.BarcodeDetector();
+          return scannerDetector;
+        } catch (__) {
+          return null;
+        }
+      }
+    }
+
+    function loadZxingLibrary() {
+      if (window.ZXing && window.ZXing.BrowserMultiFormatReader) {
+        return Promise.resolve(window.ZXing);
+      }
+      if (scannerZxingLoading) return scannerZxingLoading;
+      const urls = [
+        "https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js",
+        "https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js"
+      ];
+      scannerZxingLoading = new Promise((resolve, reject) => {
+        let idx = 0;
+        function tryNext() {
+          if (idx >= urls.length) {
+            scannerZxingLoading = null;
+            reject(new Error("Could not load barcode decoder library"));
+            return;
+          }
+          const s = document.createElement("script");
+          s.src = urls[idx++];
+          s.async = true;
+          s.onload = () => {
+            if (window.ZXing && window.ZXing.BrowserMultiFormatReader) resolve(window.ZXing);
+            else tryNext();
+          };
+          s.onerror = tryNext;
+          document.head.appendChild(s);
+        }
+        tryNext();
+      });
+      return scannerZxingLoading;
+    }
+
+    async function getZxingReader() {
+      if (scannerZxingReader) return scannerZxingReader;
+      const ZX = await loadZxingLibrary();
+      const hints = new Map();
+      if (ZX.DecodeHintType && ZX.DecodeHintType.TRY_HARDER) {
+        hints.set(ZX.DecodeHintType.TRY_HARDER, true);
+      }
+      scannerZxingReader = new ZX.BrowserMultiFormatReader(hints);
+      return scannerZxingReader;
+    }
+
+    function getScannerCanvas(w, h) {
+      if (!scannerCanvas) scannerCanvas = document.createElement("canvas");
+      scannerCanvas.width = w;
+      scannerCanvas.height = h;
+      return scannerCanvas;
+    }
+
+    async function decodeWithZxingCanvas(canvas) {
+      try {
+        const reader = await getZxingReader();
+        const ZX = window.ZXing;
+        const img = new Image();
+        const dataUrl = canvas.toDataURL("image/png");
+        await new Promise((res, rej) => {
+          img.onload = res;
+          img.onerror = rej;
+          img.src = dataUrl;
+        });
+        const result = await reader.decodeFromImageElement(img);
+        if (result && result.getText) {
+          let fmt = "CODE";
+          try {
+            if (ZX.BarcodeFormat && typeof result.getBarcodeFormat === "function") {
+              fmt = ZX.BarcodeFormat[result.getBarcodeFormat()] || "CODE";
+            }
+          } catch (_) {}
+          return { rawValue: result.getText(), format: String(fmt) };
+        }
+      } catch (_) {}
+      return null;
+    }
+
+    function updateScannerControlsUI(running) {
+      const camBtn = document.getElementById("scannerCamBtn");
+      const flipBtn = document.getElementById("scannerFlipBtn");
+      const torchBtn = document.getElementById("scannerTorchBtn");
+      if (camBtn) {
+        camBtn.textContent = running ? "⏹ Stop Camera" : "📷 Start Camera";
+        camBtn.classList.toggle("primary", !running);
+      }
+      if (flipBtn) flipBtn.style.display = running ? "inline-flex" : "none";
+      if (!running && torchBtn) {
+        torchBtn.style.display = "none";
+        torchBtn.classList.remove("active");
+        scannerTorchOn = false;
+      }
+    }
+
+    function openScannerTool() {
+      const vp = document.getElementById("scannerViewport");
+      if (vp) vp.classList.remove("photo-mode");
+      startScannerCamera();
+    }
+
+    function toggleScannerCamera() {
+      if (scannerStream) {
+        stopScannerCamera();
+        setScannerStatus("Paused", "Camera stopped. Tap Start Camera or Upload Photo.");
+      } else {
+        startScannerCamera();
+      }
+    }
+
+    async function startScannerCamera() {
+      stopScannerCamera();
+      const vp = document.getElementById("scannerViewport");
+      const video = document.getElementById("scannerVideo");
+      const ph = document.getElementById("scannerPlaceholder");
+      if (!vp || !video) return;
+
+      vp.classList.remove("photo-mode");
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        setScannerStatus("No Camera", "Camera API unavailable on this browser. Use Upload Photo.", "err");
+        if (ph) ph.innerHTML = `<span style="font-size:24px;">📷</span><span>Camera not supported here. Use <strong>Upload Photo</strong> to scan.</span>`;
+        updateScannerControlsUI(false);
+        return;
+      }
+
+      setScannerStatus("Requesting", "Asking for camera permission...");
+      try {
+        let stream = null;
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: { ideal: scannerFacingMode }, width: { ideal: 1280 }, height: { ideal: 720 } },
+            audio: false
+          });
+        } catch (err) {
+          if (err && (err.name === "NotAllowedError" || err.name === "PermissionDeniedError")) throw err;
+          stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+        }
+
+        // Guard in case user closed the tool while permission prompt was open
+        if (activeUtilTool !== "scanner" || state.tab !== "utilities") {
+          stream.getTracks().forEach(t => t.stop());
+          return;
+        }
+
+        scannerStream = stream;
+        video.srcObject = stream;
+        await video.play();
+        vp.classList.add("cam-live");
+        updateScannerControlsUI(true);
+
+        // Check if hardware torch/flash is supported
+        const track = stream.getVideoTracks()[0];
+        const torchBtn = document.getElementById("scannerTorchBtn");
+        if (torchBtn && track && typeof track.getCapabilities === "function") {
+          const caps = track.getCapabilities();
+          torchBtn.style.display = (caps && caps.torch) ? "inline-flex" : "none";
+        }
+
+        const nativeDet = await getNativeBarcodeDetector();
+        if (!nativeDet) {
+          setScannerStatus("Loading", "Loading QR & Barcode decoder...");
+          try {
+            await getZxingReader();
+          } catch (_) {
+            setScannerStatus("Offline", "Decoder library needs internet once; try again online.", "err");
+            return;
+          }
+        }
+
+        setScannerStatus("Scanning", "Point camera at QR code or Barcode", "live");
+        scannerLastTick = 0;
+        runScannerFrameLoop();
+      } catch (err) {
+        updateScannerControlsUI(false);
+        const denied = err && (err.name === "NotAllowedError" || err.name === "PermissionDeniedError");
+        setScannerStatus(
+          denied ? "Denied" : "Unavailable",
+          denied ? "Camera permission denied. Allow access or use Upload Photo." : "Unable to open camera. Use Upload Photo.",
+          "err"
+        );
+        if (ph) {
+          ph.innerHTML = `<span style="font-size:24px;">📷</span><span>${denied ? "Camera permission was denied. Tap <strong>Start Camera</strong> after allowing access, or use <strong>Upload Photo</strong>." : "Could not access camera. Use <strong>Upload Photo</strong> to scan."}</span>`;
+        }
+      }
+    }
+
+    function stopScannerCamera() {
+      if (scannerRafId) {
+        cancelAnimationFrame(scannerRafId);
+        scannerRafId = null;
+      }
+      if (scannerStream) {
+        scannerStream.getTracks().forEach(t => { try { t.stop(); } catch (_) {} });
+        scannerStream = null;
+      }
+      const video = document.getElementById("scannerVideo");
+      if (video) {
+        try { video.pause(); } catch (_) {}
+        video.srcObject = null;
+      }
+      const vp = document.getElementById("scannerViewport");
+      if (vp) vp.classList.remove("cam-live");
+      scannerTorchOn = false;
+      updateScannerControlsUI(false);
+    }
+
+    function flipScannerCamera() {
+      scannerFacingMode = scannerFacingMode === "environment" ? "user" : "environment";
+      startScannerCamera();
+    }
+
+    async function toggleScannerTorch() {
+      if (!scannerStream) return;
+      const track = scannerStream.getVideoTracks()[0];
+      if (!track || typeof track.applyConstraints !== "function") return;
+      try {
+        scannerTorchOn = !scannerTorchOn;
+        await track.applyConstraints({ advanced: [{ torch: scannerTorchOn }] });
+        const btn = document.getElementById("scannerTorchBtn");
+        if (btn) btn.classList.toggle("active", scannerTorchOn);
+      } catch (_) {
+        scannerTorchOn = false;
+      }
+    }
+
+    async function runScannerFrameLoop() {
+      if (!scannerStream || activeUtilTool !== "scanner") return;
+      const now = performance.now();
+      const video = document.getElementById("scannerVideo");
+
+      if (video && video.readyState >= 2 && video.videoWidth > 0 && (now - scannerLastTick) >= 220) {
+        scannerLastTick = now;
+        try {
+          let found = null;
+          const nativeDet = await getNativeBarcodeDetector();
+          if (nativeDet) {
+            const codes = await nativeDet.detect(video);
+            if (codes && codes.length && codes[0].rawValue) {
+              found = { rawValue: codes[0].rawValue, format: codes[0].format || "CODE" };
+            }
+          } else {
+            const cw = Math.min(video.videoWidth, 640);
+            const ch = Math.round((video.videoHeight / video.videoWidth) * cw);
+            const canvas = getScannerCanvas(cw, ch);
+            const ctx = canvas.getContext("2d", { willReadFrequently: true });
+            ctx.drawImage(video, 0, 0, cw, ch);
+            found = await decodeWithZxingCanvas(canvas);
+          }
+
+          if (found && found.rawValue) {
+            onScannerCodeDetected(found.rawValue, found.format, "Camera");
+            return;
+          }
+        } catch (_) {}
+      }
+
+      if (scannerStream && activeUtilTool === "scanner") {
+        scannerRafId = requestAnimationFrame(runScannerFrameLoop);
+      }
+    }
+
+    async function scanUploadedPhoto(evt) {
+      const file = evt.target && evt.target.files && evt.target.files[0];
+      if (!file) return;
+      evt.target.value = "";
+
+      stopScannerCamera();
+      const vp = document.getElementById("scannerViewport");
+      const preview = document.getElementById("scannerPreviewImg");
+      const objectUrl = URL.createObjectURL(file);
+
+      if (preview && vp) {
+        preview.src = objectUrl;
+        vp.classList.add("photo-mode");
+      }
+      setScannerStatus("Scanning", "Scanning uploaded photo...");
+
+      try {
+        const img = new Image();
+        await new Promise((resolve, reject) => {
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = objectUrl;
+        });
+
+        let found = null;
+        const nativeDet = await getNativeBarcodeDetector();
+        if (nativeDet) {
+          try {
+            const codes = await nativeDet.detect(img);
+            if (codes && codes.length && codes[0].rawValue) {
+              found = { rawValue: codes[0].rawValue, format: codes[0].format || "CODE" };
+            }
+          } catch (_) {}
+        }
+
+        // Draw to scaled canvas and try native + ZXing fallback if needed
+        if (!found) {
+          const maxDim = 1280;
+          const scale = Math.min(1, maxDim / Math.max(img.naturalWidth || 1, img.naturalHeight || 1));
+          const cw = Math.max(1, Math.round((img.naturalWidth || 300) * scale));
+          const ch = Math.max(1, Math.round((img.naturalHeight || 300) * scale));
+          const canvas = getScannerCanvas(cw, ch);
+          const ctx = canvas.getContext("2d", { willReadFrequently: true });
+          ctx.drawImage(img, 0, 0, cw, ch);
+
+          if (nativeDet) {
+            try {
+              const codes = await nativeDet.detect(canvas);
+              if (codes && codes.length && codes[0].rawValue) {
+                found = { rawValue: codes[0].rawValue, format: codes[0].format || "CODE" };
+              }
+            } catch (_) {}
+          }
+          if (!found) {
+            found = await decodeWithZxingCanvas(canvas);
+          }
+        }
+
+        if (found && found.rawValue) {
+          onScannerCodeDetected(found.rawValue, found.format, "Photo");
+        } else {
+          setScannerStatus("Not Found", "No QR code or Barcode detected in this photo.", "err");
+        }
+      } catch (_) {
+        setScannerStatus("Error", "Could not read this image file.", "err");
+      } finally {
+        setTimeout(() => { try { URL.revokeObjectURL(objectUrl); } catch (_) {} }, 15000);
+      }
+    }
+
+    function onScannerCodeDetected(value, format, source) {
+      if (source === "Camera") stopScannerCamera();
+      scannerLastValue = String(value);
+      const fmtClean = String(format || "CODE").replace(/_/g, " ").toUpperCase();
+
+      if (navigator.vibrate) {
+        try { navigator.vibrate(60); } catch (_) {}
+      }
+
+      const box = document.getElementById("scannerResultBox");
+      const fmtEl = document.getElementById("scannerResultFormat");
+      const txtEl = document.getElementById("scannerResultText");
+      const linkBtn = document.getElementById("scannerOpenLinkBtn");
+
+      if (fmtEl) fmtEl.textContent = `${fmtClean} · ${source}`;
+      if (txtEl) txtEl.textContent = scannerLastValue;
+      if (box) box.classList.add("show");
+
+      const isUrl = /^https?:\/\/[^\s]+$/i.test(scannerLastValue.trim());
+      if (linkBtn) {
+        linkBtn.style.display = isUrl ? "inline-flex" : "none";
+        if (isUrl) linkBtn.href = scannerLastValue.trim();
+      }
+
+      setScannerStatus("Scanned", `Detected via ${source}`, "live");
+
+      // Add to recent session scan history (keep latest 5 unique top entries)
+      scannerHistory = scannerHistory.filter(item => item.val !== scannerLastValue);
+      scannerHistory.unshift({ val: scannerLastValue, fmt: fmtClean });
+      if (scannerHistory.length > 5) scannerHistory.length = 5;
+      renderScannerHistory();
+    }
+
+    function renderScannerHistory() {
+      const wrap = document.getElementById("scannerHistoryWrap");
+      const list = document.getElementById("scannerHistoryList");
+      if (!wrap || !list) return;
+      if (!scannerHistory.length) {
+        wrap.classList.remove("show");
+        return;
+      }
+      wrap.classList.add("show");
+      list.innerHTML = scannerHistory.map((item, idx) =>
+        `<div class="scanner-hist-item">` +
+          `<span class="scanner-hist-val" title="${esc(item.val)}">${esc(item.val)}</span>` +
+          `<button type="button" class="scanner-act-btn" style="height:24px; padding:0 8px; font-size:10.5px;" onclick="copyScannerHistoryItem(${idx})">Copy</button>` +
+        `</div>`
+      ).join("");
+    }
+
+    function copyScannerResult() {
+      if (!scannerLastValue) return;
+      const btn = document.getElementById("scannerCopyBtn");
+      const done = () => {
+        if (!btn) return;
+        btn.textContent = "✓ Copied";
+        clearTimeout(btn._t);
+        btn._t = setTimeout(() => { btn.textContent = "📋 Copy"; }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(scannerLastValue).then(done).catch(done);
+      } else {
+        done();
+      }
+    }
+
+    function copyScannerHistoryItem(idx) {
+      const item = scannerHistory[idx];
+      if (!item) return;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(item.val).catch(() => {});
+      }
+      showSyncToast("Copied scanned code.");
+    }
+
+    function rescanFromCamera() {
+      const vp = document.getElementById("scannerViewport");
+      if (vp) vp.classList.remove("photo-mode");
+      startScannerCamera();
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && scannerStream) stopScannerCamera();
+    });
+
+    /* =====================================================================
+       HEALTH CALCULATOR (BMI, IDEAL WEIGHT, BMR, TDEE CALORIES, WATER)
+       ===================================================================== */
+    let healthUnit = localStorage.getItem("pt_v68_hc_unit") || "metric";
+    let healthGender = localStorage.getItem("pt_v68_hc_gender") || "male";
+
+    function setHealthUnit(unit) {
+      const next = unit === "imperial" ? "imperial" : "metric";
+      if (healthUnit !== next) {
+        const wEl = document.getElementById("hcWeight");
+        const cmEl = document.getElementById("hcHeightCm");
+        const ftEl = document.getElementById("hcHeightFt");
+        const inEl = document.getElementById("hcHeightIn");
+        if (next === "imperial") {
+          const cm = parseFloat(cmEl?.value) || 170;
+          const totalIn = cm / 2.54;
+          const ft = Math.floor(totalIn / 12);
+          const inch = Math.round((totalIn - ft * 12) * 2) / 2;
+          if (ftEl) ftEl.value = ft;
+          if (inEl) inEl.value = inch;
+          if (wEl) wEl.value = ((parseFloat(wEl.value) || 68) * 2.20462262).toFixed(1);
+        } else {
+          const ft = parseFloat(ftEl?.value) || 5;
+          const inch = parseFloat(inEl?.value) || 7;
+          if (cmEl) cmEl.value = ((ft * 12 + inch) * 2.54).toFixed(1);
+          if (wEl) wEl.value = ((parseFloat(wEl.value) || 150) / 2.20462262).toFixed(1);
+        }
+      }
+      healthUnit = next;
+      localStorage.setItem("pt_v68_hc_unit", healthUnit);
+      renderHealthCalculator();
+    }
+
+    function setHealthGender(g) {
+      healthGender = g === "female" ? "female" : "male";
+      localStorage.setItem("pt_v68_hc_gender", healthGender);
+      renderHealthCalculator();
+    }
+
+    function renderHealthCalculator() {
+      const isImp = healthUnit === "imperial";
+      const btnM = document.getElementById("hcUnitMetric");
+      const btnI = document.getElementById("hcUnitImperial");
+      if (btnM) btnM.classList.toggle("active", !isImp);
+      if (btnI) btnI.classList.toggle("active", isImp);
+
+      const gMale = document.getElementById("hcGenderMale");
+      const gFem = document.getElementById("hcGenderFemale");
+      if (gMale) gMale.classList.toggle("active", healthGender === "male");
+      if (gFem) gFem.classList.toggle("active", healthGender === "female");
+
+      const cmEl = document.getElementById("hcHeightCm");
+      const impWrap = document.getElementById("hcHeightImpWrap");
+      const hLbl = document.getElementById("hcHeightLbl");
+      const wLbl = document.getElementById("hcWeightLbl");
+      if (cmEl) cmEl.style.display = isImp ? "none" : "";
+      if (impWrap) impWrap.classList.toggle("show", isImp);
+      if (hLbl) hLbl.textContent = isImp ? "Height (ft / in)" : "Height (cm)";
+      if (wLbl) wLbl.textContent = isImp ? "Weight (lb)" : "Weight (kg)";
+
+      const age = Math.max(5, Math.min(120, parseFloat(document.getElementById("hcAge")?.value) || 30));
+      let heightCm = 170;
+      let weightKg = 68;
+
+      if (isImp) {
+        const ft = Math.max(0, parseFloat(document.getElementById("hcHeightFt")?.value) || 0);
+        const inch = Math.max(0, parseFloat(document.getElementById("hcHeightIn")?.value) || 0);
+        heightCm = (ft * 12 + inch) * 2.54;
+        weightKg = (Math.max(0, parseFloat(document.getElementById("hcWeight")?.value) || 0)) / 2.20462262;
+      } else {
+        heightCm = Math.max(0, parseFloat(document.getElementById("hcHeightCm")?.value) || 0);
+        weightKg = Math.max(0, parseFloat(document.getElementById("hcWeight")?.value) || 0);
+      }
+
+      const actFactor = parseFloat(document.getElementById("hcActivity")?.value) || 1.55;
+      const heightM = heightCm / 100;
+
+      if (heightM <= 0.3 || weightKg <= 5) {
+        document.getElementById("hcBmiVal").textContent = "--";
+        document.getElementById("hcBmiBadge").textContent = "Enter values";
+        return;
+      }
+
+      const bmi = weightKg / (heightM * heightM);
+      let catText = "Normal", catCls = "normal";
+      if (bmi < 18.5)      { catText = "Underweight"; catCls = "under"; }
+      else if (bmi < 25)   { catText = "Normal";      catCls = "normal"; }
+      else if (bmi < 30)   { catText = "Overweight";  catCls = "over"; }
+      else                 { catText = "Obese";       catCls = "obese"; }
+
+      document.getElementById("hcBmiVal").textContent = bmi.toFixed(1);
+      const badge = document.getElementById("hcBmiBadge");
+      badge.textContent = catText;
+      badge.className = `hc-bmi-pill ${catCls}`;
+
+      // Map BMI [12..40] onto [2%..98%] of the visual scale
+      const pct = Math.max(2, Math.min(98, ((bmi - 12) / (40 - 12)) * 100));
+      const marker = document.getElementById("hcBmiMarker");
+      if (marker) marker.style.left = pct.toFixed(1) + "%";
+
+      // Healthy weight range (BMI 18.5 - 24.9)
+      const minKg = 18.5 * heightM * heightM;
+      const maxKg = 24.9 * heightM * heightM;
+      const idealStr = isImp
+        ? `${(minKg * 2.20462).toFixed(1)} – ${(maxKg * 2.20462).toFixed(1)} lb`
+        : `${minKg.toFixed(1)} – ${maxKg.toFixed(1)} kg`;
+      document.getElementById("hcIdealWeight").textContent = idealStr;
+
+      // Mifflin-St Jeor BMR
+      const bmr = Math.max(0, Math.round(10 * weightKg + 6.25 * heightCm - 5 * age + (healthGender === "male" ? 5 : -161)));
+      const tdee = Math.round(bmr * actFactor);
+
+      document.getElementById("hcBmrVal").textContent = `${bmr.toLocaleString("en-IN")} kcal`;
+      document.getElementById("hcTdeeVal").textContent = `${tdee.toLocaleString("en-IN")} kcal`;
+      document.getElementById("hcCalLoss").textContent = Math.max(1200, tdee - 500).toLocaleString("en-IN");
+      document.getElementById("hcCalMildLoss").textContent = Math.max(1200, tdee - 250).toLocaleString("en-IN");
+      document.getElementById("hcCalGain").textContent = (tdee + 250).toLocaleString("en-IN");
+
+      // Daily water intake (~35 ml per kg, adjusted slightly for activity)
+      const actWaterBonus = actFactor >= 1.725 ? 0.5 : actFactor >= 1.55 ? 0.25 : 0;
+      const liters = Math.max(1.2, (weightKg * 0.033) + actWaterBonus);
+      const glasses = Math.round(liters / 0.25);
+      document.getElementById("hcWaterVal").textContent = `${liters.toFixed(1)} L / day`;
+      document.getElementById("hcWaterGlasses").textContent = `≈ ${glasses} glasses (250 ml)`;
+    }
+
+    /* =====================================================================
+       ROMAN NUMERALS CONVERTER (NUMBER -> ROMAN)
+       ===================================================================== */
+    const ROMAN_MAP = [
+      [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
+      [100, "C"],  [90, "XC"],  [50, "L"],  [40, "XL"],
+      [10, "X"],   [9, "IX"],   [5, "V"],   [4, "IV"], [1, "I"]
+    ];
+
+    function toRomanNumeral(num) {
+      let n = Math.floor(num);
+      let out = "";
+      for (const [val, sym] of ROMAN_MAP) {
+        while (n >= val) {
+          out += sym;
+          n -= val;
+        }
+      }
+      return out;
+    }
+
+    function clearRomanInput() {
+      const inp = document.getElementById("romanInput");
+      if (inp) { inp.value = ""; inp.focus(); }
+      renderRomanConverter();
+    }
+
+    function renderRomanConverter() {
+      const inp = document.getElementById("romanInput");
+      const outEl = document.getElementById("romanResult");
+      const errEl = document.getElementById("romanErrMsg");
+      if (!inp || !outEl) return;
+
+      const raw = String(inp.value || "").trim();
+      if (!raw) {
+        outEl.textContent = "--";
+        if (errEl) { errEl.textContent = ""; errEl.classList.remove("show"); }
+        return;
+      }
+
+      const num = Number(raw);
+      if (!Number.isInteger(num) || num < 1 || num > 3999) {
+        outEl.textContent = "--";
+        if (errEl) {
+          errEl.textContent = "Enter a whole number between 1 and 3,999.";
+          errEl.classList.add("show");
+        }
+        return;
+      }
+
+      if (errEl) { errEl.textContent = ""; errEl.classList.remove("show"); }
+      outEl.textContent = toRomanNumeral(num);
+    }
+
+    function copyRomanResult() {
+      const val = (document.getElementById("romanResult")?.textContent || "").trim();
+      if (!val || val === "--") return;
+      const btn = document.getElementById("romanCopyBtn");
+      const done = () => {
+        if (!btn) return;
+        btn.textContent = "✓ Copied";
+        clearTimeout(btn._t);
+        btn._t = setTimeout(() => { btn.textContent = "📋 Copy"; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).then(done).catch(done);
+      } else {
+        done();
+      }
+    }
+
+    /* =====================================================================
+       COUNTDOWN TIMER (DRIFT-FREE + PRESETS + AUDIO/VIBRATION ALERT)
+       ===================================================================== */
+    let cdTotalMs = 5 * 60 * 1000;
+    let cdRemainingMs = 5 * 60 * 1000;
+    let cdEndAt = 0;
+    let cdRunning = false;
+    let cdDone = false;
+    let cdInterval = null;
+
+    function formatHmsFromMs(ms) {
+      const totalSec = Math.max(0, Math.ceil(ms / 1000));
+      const h = Math.floor(totalSec / 3600);
+      const m = Math.floor((totalSec % 3600) / 60);
+      const s = totalSec % 60;
+      return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+    }
+
+    function readCountdownInputsMs() {
+      const h = Math.max(0, Math.min(99, parseInt(document.getElementById("cdHours")?.value, 10) || 0));
+      const m = Math.max(0, Math.min(59, parseInt(document.getElementById("cdMinutes")?.value, 10) || 0));
+      const s = Math.max(0, Math.min(59, parseInt(document.getElementById("cdSeconds")?.value, 10) || 0));
+      return ((h * 3600) + (m * 60) + s) * 1000;
+    }
+
+    function playCountdownBeep() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        [0, 0.28, 0.56].forEach(offset => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = "sine";
+          osc.frequency.value = 880;
+          gain.gain.setValueAtTime(0.18, ctx.currentTime + offset);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + offset + 0.22);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + offset);
+          osc.stop(ctx.currentTime + offset + 0.23);
+        });
+      } catch (_) {}
+      if (navigator.vibrate) {
+        try { navigator.vibrate([180, 90, 180, 90, 260]); } catch (_) {}
+      }
+    }
+
+    function onCountdownInputChange() {
+      if (cdRunning) return;
+      cdDone = false;
+      cdTotalMs = readCountdownInputsMs();
+      cdRemainingMs = cdTotalMs;
+      renderCountdownUI();
+    }
+
+    function setCountdownPreset(mins) {
+      stopCountdownTicker();
+      cdRunning = false;
+      cdDone = false;
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      const hEl = document.getElementById("cdHours");
+      const mEl = document.getElementById("cdMinutes");
+      const sEl = document.getElementById("cdSeconds");
+      if (hEl) hEl.value = h;
+      if (mEl) mEl.value = m;
+      if (sEl) sEl.value = 0;
+      cdTotalMs = mins * 60 * 1000;
+      cdRemainingMs = cdTotalMs;
+      renderCountdownUI();
+    }
+
+    function stopCountdownTicker() {
+      if (cdInterval) {
+        clearInterval(cdInterval);
+        cdInterval = null;
+      }
+    }
+
+    function toggleCountdown() {
+      if (cdRunning) {
+        cdRemainingMs = Math.max(0, cdEndAt - Date.now());
+        cdRunning = false;
+        stopCountdownTicker();
+        renderCountdownUI();
+        return;
+      }
+
+      if (cdRemainingMs <= 0 || cdDone) {
+        cdTotalMs = readCountdownInputsMs();
+        cdRemainingMs = cdTotalMs;
+      }
+      if (cdRemainingMs <= 0) {
+        showSyncToast("Set a countdown duration greater than 0.");
+        return;
+      }
+
+      cdDone = false;
+      cdRunning = true;
+      cdEndAt = Date.now() + cdRemainingMs;
+      stopCountdownTicker();
+      cdInterval = setInterval(tickCountdown, 100);
+      renderCountdownUI();
+    }
+
+    function tickCountdown() {
+      if (!cdRunning) return;
+      const rem = cdEndAt - Date.now();
+      if (rem <= 0) {
+        cdRemainingMs = 0;
+        cdRunning = false;
+        cdDone = true;
+        stopCountdownTicker();
+        renderCountdownUI();
+        playCountdownBeep();
+        showSyncToast("Countdown finished!");
+        return;
+      }
+      cdRemainingMs = rem;
+      renderCountdownUI();
+    }
+
+    function addCountdownMinute() {
+      const addMs = 60 * 1000;
+      cdDone = false;
+      cdTotalMs = Math.max(cdTotalMs, cdRemainingMs) + addMs;
+      if (cdRunning) {
+        cdEndAt += addMs;
+        cdRemainingMs = Math.max(0, cdEndAt - Date.now());
+      } else {
+        cdRemainingMs += addMs;
+        const totalSec = Math.round(cdRemainingMs / 1000);
+        const hEl = document.getElementById("cdHours");
+        const mEl = document.getElementById("cdMinutes");
+        const sEl = document.getElementById("cdSeconds");
+        if (hEl) hEl.value = Math.min(99, Math.floor(totalSec / 3600));
+        if (mEl) mEl.value = Math.floor((totalSec % 3600) / 60);
+        if (sEl) sEl.value = totalSec % 60;
+      }
+      renderCountdownUI();
+    }
+
+    function resetCountdown() {
+      stopCountdownTicker();
+      cdRunning = false;
+      cdDone = false;
+      cdTotalMs = readCountdownInputsMs();
+      cdRemainingMs = cdTotalMs;
+      renderCountdownUI();
+    }
+
+    function renderCountdownUI() {
+      const disp = document.getElementById("cdTimeDisplay");
+      const box = document.getElementById("cdDisplayBox");
+      const fill = document.getElementById("cdProgFill");
+      const pill = document.getElementById("cdStatusPill");
+      const sub = document.getElementById("cdSubLine");
+      const btn = document.getElementById("cdStartPauseBtn");
+      if (!disp) return;
+
+      disp.textContent = formatHmsFromMs(cdRemainingMs);
+      if (box) box.classList.toggle("done", cdDone);
+
+      const frac = cdTotalMs > 0 ? Math.max(0, Math.min(1, cdRemainingMs / cdTotalMs)) : 0;
+      if (fill) {
+        fill.style.width = (cdDone ? 0 : frac * 100).toFixed(1) + "%";
+        fill.classList.toggle("low", cdRunning && cdRemainingMs <= 10000);
+      }
+
+      if (pill) {
+        if (cdDone) {
+          pill.textContent = "Time's Up";
+          pill.className = "scanner-status-pill err";
+        } else if (cdRunning) {
+          pill.textContent = "Running";
+          pill.className = "scanner-status-pill live";
+        } else if (cdRemainingMs > 0 && cdRemainingMs < cdTotalMs) {
+          pill.textContent = "Paused";
+          pill.className = "scanner-status-pill";
+        } else {
+          pill.textContent = "Ready";
+          pill.className = "scanner-status-pill";
+        }
+      }
+
+      if (sub) {
+        if (cdDone) {
+          sub.textContent = "Countdown complete!";
+        } else if (cdRunning) {
+          const endDt = new Date(cdEndAt);
+          sub.textContent = `Ends at ${endDt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}`;
+        } else if (cdRemainingMs > 0 && cdRemainingMs < cdTotalMs) {
+          sub.textContent = "Paused — tap Resume or Reset";
+        } else {
+          sub.textContent = "Set duration and tap Start";
+        }
+      }
+
+      if (btn) {
+        if (cdRunning) {
+          btn.textContent = "⏸ Pause";
+          btn.className = "tm-act-btn running";
+        } else if (cdRemainingMs > 0 && cdRemainingMs < cdTotalMs && !cdDone) {
+          btn.textContent = "▶ Resume";
+          btn.className = "tm-act-btn primary";
+        } else {
+          btn.textContent = "▶ Start";
+          btn.className = "tm-act-btn primary";
+        }
+      }
+
+      ["cdHours", "cdMinutes", "cdSeconds"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.disabled = cdRunning;
+      });
+    }
+
+    /* =====================================================================
+       STOPWATCH (CENTISECOND PRECISION + LAP SPLITS + FASTEST/SLOWEST)
+       ===================================================================== */
+    let swElapsedMs = 0;
+    let swStartAt = 0;
+    let swRunning = false;
+    let swRafId = null;
+    let swLaps = []; // [{ num, splitMs, totalMs }]
+
+    function formatStopwatchParts(ms) {
+      const safe = Math.max(0, Math.floor(ms));
+      const cs = Math.floor((safe % 1000) / 10);
+      const totalSec = Math.floor(safe / 1000);
+      const h = Math.floor(totalSec / 3600);
+      const m = Math.floor((totalSec % 3600) / 60);
+      const s = totalSec % 60;
+      return {
+        main: `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`,
+        cs: `.${String(cs).padStart(2, "0")}`,
+        full: `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}.${String(cs).padStart(2, "0")}`
+      };
+    }
+
+    function getCurrentStopwatchMs() {
+      return swRunning ? (swElapsedMs + (Date.now() - swStartAt)) : swElapsedMs;
+    }
+
+    function runStopwatchLoop() {
+      if (!swRunning) return;
+      renderStopwatchDisplayOnly();
+      swRafId = requestAnimationFrame(runStopwatchLoop);
+    }
+
+    function toggleStopwatch() {
+      if (swRunning) {
+        swElapsedMs += Date.now() - swStartAt;
+        swRunning = false;
+        if (swRafId) { cancelAnimationFrame(swRafId); swRafId = null; }
+        renderStopwatchUI();
+      } else {
+        swStartAt = Date.now();
+        swRunning = true;
+        renderStopwatchUI();
+        swRafId = requestAnimationFrame(runStopwatchLoop);
+      }
+    }
+
+    function recordStopwatchLap() {
+      if (!swRunning) return;
+      const totalMs = getCurrentStopwatchMs();
+      const prevTotal = swLaps.length ? swLaps[0].totalMs : 0;
+      const splitMs = Math.max(0, totalMs - prevTotal);
+      swLaps.unshift({ num: swLaps.length + 1, splitMs, totalMs });
+      renderStopwatchLaps();
+      renderStopwatchDisplayOnly();
+    }
+
+    function resetStopwatch() {
+      swRunning = false;
+      if (swRafId) { cancelAnimationFrame(swRafId); swRafId = null; }
+      swElapsedMs = 0;
+      swStartAt = 0;
+      swLaps = [];
+      renderStopwatchUI();
+    }
+
+    function renderStopwatchDisplayOnly() {
+      const mainEl = document.getElementById("swTimeMain");
+      const csEl = document.getElementById("swTimeCs");
+      const lapLive = document.getElementById("swLapLiveLine");
+      if (!mainEl || !csEl) return;
+
+      const cur = getCurrentStopwatchMs();
+      const p = formatStopwatchParts(cur);
+      mainEl.textContent = p.main;
+      csEl.textContent = p.cs;
+
+      if (lapLive) {
+        if (swLaps.length) {
+          const curSplit = Math.max(0, cur - swLaps[0].totalMs);
+          lapLive.textContent = `Current Lap #${swLaps.length + 1}: ${formatStopwatchParts(curSplit).full}`;
+        } else if (swRunning) {
+          lapLive.textContent = "Timing... tap Lap to record split";
+        } else if (cur > 0) {
+          lapLive.textContent = "Paused — tap Resume or Reset";
+        } else {
+          lapLive.textContent = "Tap Start to begin timing";
+        }
+      }
+    }
+
+    function renderStopwatchLaps() {
+      const wrap = document.getElementById("swLapsWrap");
+      const list = document.getElementById("swLapsList");
+      if (!wrap || !list) return;
+
+      if (!swLaps.length) {
+        wrap.classList.remove("show");
+        list.innerHTML = "";
+        return;
+      }
+
+      let bestSplit = Infinity, worstSplit = -1;
+      if (swLaps.length >= 2) {
+        swLaps.forEach(l => {
+          if (l.splitMs < bestSplit) bestSplit = l.splitMs;
+          if (l.splitMs > worstSplit) worstSplit = l.splitMs;
+        });
+      }
+
+      wrap.classList.add("show");
+      list.innerHTML = swLaps.map(l => {
+        const cls = (swLaps.length >= 2 && bestSplit !== worstSplit)
+          ? (l.splitMs === bestSplit ? " best" : l.splitMs === worstSplit ? " worst" : "")
+          : "";
+        return `<div class="sw-lap-row${cls}">` +
+          `<span class="sw-lap-num">#${l.num}</span>` +
+          `<span class="sw-lap-split">+${formatStopwatchParts(l.splitMs).full}</span>` +
+          `<span class="sw-lap-total">${formatStopwatchParts(l.totalMs).full}</span>` +
+        `</div>`;
+      }).join("");
+    }
+
+    function renderStopwatchUI() {
+      renderStopwatchDisplayOnly();
+      renderStopwatchLaps();
+
+      const pill = document.getElementById("swStatusPill");
+      const btn = document.getElementById("swStartPauseBtn");
+      const lapBtn = document.getElementById("swLapBtn");
+      const cur = getCurrentStopwatchMs();
+
+      if (pill) {
+        if (swRunning) {
+          pill.textContent = "Running";
+          pill.className = "scanner-status-pill live";
+        } else if (cur > 0) {
+          pill.textContent = "Paused";
+          pill.className = "scanner-status-pill";
+        } else {
+          pill.textContent = "Ready";
+          pill.className = "scanner-status-pill";
+        }
+      }
+
+      if (btn) {
+        if (swRunning) {
+          btn.textContent = "⏸ Pause";
+          btn.className = "tm-act-btn running";
+        } else if (cur > 0) {
+          btn.textContent = "▶ Resume";
+          btn.className = "tm-act-btn primary";
+        } else {
+          btn.textContent = "▶ Start";
+          btn.className = "tm-act-btn primary";
+        }
+      }
+
+      if (lapBtn) lapBtn.disabled = !swRunning;
+    }
+
+    /* =====================================================================
        TOOLS PAGE TOP SLIDER (EDITABLE HEADINGS + REARRANGE TOOLS ACROSS HEADINGS)
        ===================================================================== */
     const TOOLS_SLIDER_KEY = "pt_v64_tools_slider";
@@ -12756,6 +15143,11 @@
       { slabId: "sq-uc",      toolKey: "uc",      name: "Unit Converter",   defaultHeading: "general" },
       { slabId: "sq-calc",    toolKey: "calc",    name: "Calculator",       defaultHeading: "general" },
       { slabId: "sq-compass", toolKey: "compass", name: "Compass",          defaultHeading: "general" },
+      { slabId: "sq-scanner", toolKey: "scanner", name: "Scanner",          defaultHeading: "general" },
+      { slabId: "sq-health",  toolKey: "health",  name: "Health Calculator", defaultHeading: "general" },
+      { slabId: "sq-roman",   toolKey: "roman",   name: "Roman Numerals",    defaultHeading: "general" },
+      { slabId: "sq-countdown", toolKey: "countdown", name: "Countdown",       defaultHeading: "general" },
+      { slabId: "sq-stopwatch", toolKey: "stopwatch", name: "Stopwatch",       defaultHeading: "general" },
       { slabId: "sq-emi",     toolKey: "emi",     name: "EMI Calculator",   defaultHeading: "finance" },
       { slabId: "sq-zakat",   toolKey: "zakat",   name: "Zakat Calculator", defaultHeading: "finance" },
       { slabId: "sq-age",     toolKey: "age",     name: "Age Calculator",   defaultHeading: "datetime" },
